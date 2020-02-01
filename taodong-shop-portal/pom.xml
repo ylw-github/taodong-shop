@@ -8,6 +8,8 @@
 	</parent>
 	<artifactId>taodong-shop-portal</artifactId>
 
+	<packaging>pom</packaging>
+
 	<modules>
 		<module>taodong-shop-portal-cms</module>
 		<module>taodong-shop-portal-search</module>

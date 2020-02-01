@@ -7,6 +7,9 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>taodong-shop-service</artifactId>
+
+	<packaging>pom</packaging>
+
 	<modules>
 		<module>taodong-shop-service-item</module>
 		<module>taodong-shop-service-member</module>
@@ -17,4 +20,13 @@
 		<module>taodong-shop-service-sso</module>
 		<module>taodong-shop-service-weixin</module>
 	</modules>
+
+	<dependencies>
+		<!-- springcloud feign组件 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+	</dependencies>
 </project>

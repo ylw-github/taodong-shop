@@ -7,6 +7,8 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>taodong-shop-service-api</artifactId>
+
+	<packaging>pom</packaging>
 	<modules>
 		<module>taodong-shop-service-api-item</module>
 		<module>taodong-shop-service-api-member</module>
