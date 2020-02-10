@@ -6,6 +6,7 @@
 		<artifactId>taodong-shop-service</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
+	<packaging>jar</packaging>
 	<artifactId>taodong-shop-service-member</artifactId>
 
 	<dependencies>

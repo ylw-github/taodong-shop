@@ -10,3 +10,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka
+####swagger相关配置
+swagger:
+  base-package: com.ylw.taodong
+  title: 淘东电商项目-会员服务接口
+  description: 该项目“基于SpringCloud2.x构建微服务电商项目。
+  version: 1.1
+  terms-of-service-url: www.xxx.com
+  contact:
+    name: 杨林伟
+    email: xxxxxx@qq.com
