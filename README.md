@@ -14,3 +14,6 @@
 - [淘东电商项目（08） -Docker搭建Maven私服仓库](https://yanglinwei.blog.csdn.net/article/details/104251876)
 - [淘东电商项目（09） -Maven私服的上传与下载详解](https://yanglinwei.blog.csdn.net/article/details/104258712)
 - [淘东电商项目（10） -Apollo分布式配置中心管理application.yml](https://yanglinwei.blog.csdn.net/article/details/104262790)
+- [淘东电商项目（11） -Apollo分布式配置中心管理Swagger](https://yanglinwei.blog.csdn.net/article/details/104274148)
+- [淘东电商项目（12） -搭建企业级微信公众号](https://yanglinwei.blog.csdn.net/article/details/104278660)
+
