@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8100/eureka
+      defaultZone: http://192.168.162.135:8080/eureka
 ####swagger相关配置
 swagger:
   base-package: com.ylw.taodong
@@ -20,3 +20,12 @@ swagger:
   contact:
     name: 杨林伟
     email: xxxxxx@qq.com
+app:
+  appsecret: ylw888
+wx:
+  mp:
+    configs:
+      - appId: wx????f95 #（一个公众号的appid）
+        secret: bb?????e1c3 #（公众号的appsecret）
+        token: ylw666 #（接口配置里的Token值）
+        #aesKey:  111（接口配置里的EncodingAESKey值）

@@ -16,5 +16,36 @@
 			<artifactId>taodong-shop-service-api-weixin</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+
+
+		<dependency>
+			<groupId>com.github.binarywang</groupId>
+			<artifactId>weixin-java-mp</artifactId>
+			<version>3.6.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xstream</artifactId>
+					<groupId>com.thoughtworks.xstream</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>
+				spring-cloud-starter-netflix-eureka-client
+			</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>xstream</artifactId>
+					<groupId>com.thoughtworks.xstream</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<artifactId>xstream</artifactId>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<version>1.4.10</version>
+		</dependency>
+
 	</dependencies>
 </project>
