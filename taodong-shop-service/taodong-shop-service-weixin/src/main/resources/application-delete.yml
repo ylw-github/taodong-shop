@@ -3,8 +3,31 @@ server:
   port: 8200
 ###服务名称(服务注册到eureka名称)
 spring:
+
   application:
     name: taodong-shop-service-weixin
+
+  redis:
+    host: 192.168.162.136
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+### 公众号默认回复消息
+taodong:
+  weixin:
+    registration:
+      code:
+        ###微信注册码消息
+        message:  您的注册码为:%s
+    ###默认提示消息
+    default:
+      registration:
+        code:
+          message: 我们已经收到您的消息,将有客服会及时回复您的!
 ###服务注册到eureka地址
 eureka:
   client:
@@ -29,3 +52,5 @@ wx:
         secret: bb?????e1c3 #（公众号的appsecret）
         token: ylw666 #（接口配置里的Token值）
         #aesKey:  111（接口配置里的EncodingAESKey值）
+
+

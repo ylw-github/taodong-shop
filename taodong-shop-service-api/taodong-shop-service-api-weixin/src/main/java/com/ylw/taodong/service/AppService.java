@@ -10,6 +10,6 @@ public interface AppService {
 
     @ApiOperation(value = "微信应用服务接口")
     @GetMapping("/getApp")
-    public AppEntity getApp();
+    AppEntity getApp();
 
 }

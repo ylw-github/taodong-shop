@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>taodong-shop-api-entity</module>
         <module>taodong-shop-basics</module>
         <module>taodong-shop-common</module>
         <module>taodong-shop-service-api</module>
