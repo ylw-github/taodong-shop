@@ -16,4 +16,6 @@
 - [淘东电商项目（10） -Apollo分布式配置中心管理application.yml](https://yanglinwei.blog.csdn.net/article/details/104262790)
 - [淘东电商项目（11） -Apollo分布式配置中心管理Swagger](https://yanglinwei.blog.csdn.net/article/details/104274148)
 - [淘东电商项目（12） -搭建企业级微信公众号](https://yanglinwei.blog.csdn.net/article/details/104278660)
-
+- [淘东电商项目（13） -项目整合WxJava](https://yanglinwei.blog.csdn.net/article/details/104314089)
+- [淘东电商项目（14） -公众号获取注册码功能](https://yanglinwei.blog.csdn.net/article/details/104355051)
+- [淘东电商项目（15） -项目配置信息分类](https://yanglinwei.blog.csdn.net/article/details/104412036)
