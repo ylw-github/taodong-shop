@@ -10,19 +10,30 @@ import lombok.Data;
 @Data
 public class BaseResponse<T> {
 
-    private Integer rtnCode;
+    /**
+     * 返回码
+     */
+    private Integer code;
+    /**
+     * 消息
+     */
     private String msg;
+    /**
+     * 返回
+     */
     private T data;
+    // 分页
 
     public BaseResponse() {
 
     }
 
-    public BaseResponse(Integer rtnCode, String msg, T data) {
+    public BaseResponse(Integer code, String msg, T data) {
         super();
-        this.rtnCode = rtnCode;
+        this.code = code;
         this.msg = msg;
         this.data = data;
     }
+
 
 }

@@ -7,4 +7,5 @@
         <version>1.0-RELEASE</version>
     </parent>
     <artifactId>taodong-shop-api-member-entity</artifactId>
+
 </project>

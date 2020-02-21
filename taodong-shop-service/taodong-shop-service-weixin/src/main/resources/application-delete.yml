@@ -6,7 +6,11 @@ spring:
 
   application:
     name: taodong-shop-service-weixin
-
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taodong-weixin?characterEncoding=utf8&useSSL=false
   redis:
     host: 192.168.162.136
     port: 6379
@@ -35,7 +39,7 @@ eureka:
       defaultZone: http://192.168.162.135:8080/eureka
 ####swagger相关配置
 swagger:
-  base-package: com.ylw.taodong
+  base-package: com.ylw
   title: 淘东电商项目-微信服务接口
   description: 该项目“基于SpringCloud2.x构建微服务电商项目。
   version: 1.1
