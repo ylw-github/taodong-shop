@@ -10,6 +10,7 @@
 	<packaging>jar</packaging>
 
 	<artifactId>taodong-shop-service-weixin</artifactId>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.ylw</groupId>

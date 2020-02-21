@@ -38,11 +38,6 @@
 			<artifactId>apollo-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.ylw.taodong</groupId>
-			<artifactId>taodong-shop-common-core</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
 
 	</dependencies>
 </project>

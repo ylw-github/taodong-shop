@@ -1,9 +1,6 @@
 package com.ylw.service.weixin.weixin.mp.config;
 
 import com.ylw.service.weixin.weixin.mp.handler.*;
-import com.ylw.taodong.service.weixin.weixin.mp.handler.*;
-import com.ylw.taodong.service.weixin.weixinmp.handler.*;
-import com.ylw.taodong.wx.mp.handler.*;
 import lombok.AllArgsConstructor;
 import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import me.chanjar.weixin.mp.api.WxMpService;
