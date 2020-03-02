@@ -1,7 +1,7 @@
 package com.ylw.service.api.member;
 
 import com.alibaba.fastjson.JSONObject;
-import com.ylw.api.member.entity.UserEntity;
+import com.ylw.api.member.dto.intput.UserInDTO;
 import com.ylw.common.core.entity.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,7 +19,7 @@ public interface MemberRegisterService {
      */
     @PostMapping("/register")
     @ApiOperation(value = "会员用户注册信息接口")
-    BaseResponse<JSONObject> register(@RequestBody UserEntity userEntity,
+    BaseResponse<JSONObject> register(@RequestBody UserInDTO userEntity,
                                       @RequestParam("registCode") String registCode);
 
 }

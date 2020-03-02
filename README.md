@@ -19,3 +19,6 @@
 - [淘东电商项目（13） -项目整合WxJava](https://yanglinwei.blog.csdn.net/article/details/104314089)
 - [淘东电商项目（14） -公众号获取注册码功能](https://yanglinwei.blog.csdn.net/article/details/104355051)
 - [淘东电商项目（15） -项目配置信息分类](https://yanglinwei.blog.csdn.net/article/details/104412036)
+- [淘东电商项目（16） -会员注册功能](https://yanglinwei.blog.csdn.net/article/details/104423787)
+- [淘东电商项目（17） -DTO接口细分](https://yanglinwei.blog.csdn.net/article/details/104606609)
+

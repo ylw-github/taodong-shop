@@ -1,6 +1,6 @@
 package com.ylw.service.weixin.weixin.mp.handler;
 
-import com.ylw.api.member.entity.UserEntity;
+import com.ylw.api.member.dto.output.UserOutDTO;
 import com.ylw.common.core.constants.Constants;
 import com.ylw.common.core.entity.BaseResponse;
 import com.ylw.common.core.util.RegexUtils;
@@ -66,7 +66,7 @@ public class MsgHandler extends AbstractHandler {
         // 2.使用正则表达式验证消息是否为手机号码格式
         if (RegexUtils.checkMobile(fromContent)) {
             // 1.根据手机号码调用会员服务接口查询用户信息是否存在
-            BaseResponse<UserEntity> reusltUserInfo = memberServiceFeign.existMobile(fromContent);
+            BaseResponse<UserOutDTO> reusltUserInfo = memberServiceFeign.existMobile(fromContent);
             if (reusltUserInfo.getCode().equals(Constants.HTTP_RES_CODE_200)) {
                 return new TextBuilder().build("该手机号码" + fromContent + "已经存在!", wxMessage, weixinService);
             }

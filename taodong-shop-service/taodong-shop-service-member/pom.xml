@@ -15,5 +15,11 @@
 			<artifactId>taodong-shop-service-api-member</artifactId>
 			<version>1.0-RELEASE</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-service-api-weixin</artifactId>
+            <version>1.0-RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

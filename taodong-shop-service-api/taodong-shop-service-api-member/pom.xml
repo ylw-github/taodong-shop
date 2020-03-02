@@ -11,12 +11,12 @@
     <dependencies>
         <dependency>
             <groupId>com.ylw</groupId>
-            <artifactId>taodong-shop-service-api-weixin</artifactId>
+            <artifactId>aodong-shop-api-weixin-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.ylw</groupId>
-            <artifactId>taodong-shop-api-member-entity</artifactId>
+            <artifactId>taodong-shop-api-member-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>

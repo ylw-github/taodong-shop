@@ -1,6 +1,6 @@
 package com.ylw.service.member.mapper;
 
-import com.ylw.api.member.entity.UserEntity;
+import com.ylw.service.member.mapper.entity.UserDo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.data.repository.query.Param;
@@ -13,8 +13,8 @@ import org.springframework.data.repository.query.Param;
 public interface UserMapper {
 
 	@Insert("INSERT INTO `user` VALUES (null,#{mobile}, #{email}, #{password}, #{userName}, null, null, null, '1', null, null, null);")
-	int register(UserEntity userEntity);
+	int register(UserDo userEntity);
 
 	@Select("SELECT * FROM user WHERE MOBILE=#{mobile};")
-	UserEntity existMobile(@Param("mobile") String mobile);
+	UserDo existMobile(@Param("mobile") String mobile);
 }

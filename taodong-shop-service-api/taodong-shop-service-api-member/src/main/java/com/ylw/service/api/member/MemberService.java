@@ -1,6 +1,6 @@
 package com.ylw.service.api.member;
 
-import com.ylw.api.member.entity.UserEntity;
+import com.ylw.api.member.dto.output.UserOutDTO;
 import com.ylw.common.core.entity.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -21,7 +21,7 @@ public interface MemberService {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "mobile", dataType = "String", required = true, value = "用户手机号码"), })
     @PostMapping("/existMobile")
-    BaseResponse<UserEntity> existMobile(@RequestParam("mobile") String mobile);
+    BaseResponse<UserOutDTO> existMobile(@RequestParam("mobile") String mobile);
 
 
 }
