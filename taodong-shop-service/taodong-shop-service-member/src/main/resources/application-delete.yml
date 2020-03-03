@@ -10,6 +10,15 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/taodong-member?characterEncoding=utf8&useSSL=false
+  redis:
+    host: 192.168.162.136
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 100
+        max-wait: -1
+        min-idle: 1
+    port: 6379
 ###服务注册到eureka地址
 eureka:
   client:
@@ -32,5 +41,8 @@ mybatis:
 logging:
   level:
     com.ylw.service.member.mapper: debug
+
+
+
 
 

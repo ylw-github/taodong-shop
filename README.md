@@ -23,3 +23,5 @@
 - [淘东电商项目（17） -DTO接口细分](https://yanglinwei.blog.csdn.net/article/details/104606609)
 - [淘东电商项目（18） -全局异常捕获](https://yanglinwei.blog.csdn.net/article/details/104627994)
 - [淘东电商项目（19） -日志打印](https://yanglinwei.blog.csdn.net/article/details/104631478)
+- [淘东电商项目（20） -会员唯一登录](https://yanglinwei.blog.csdn.net/article/details/104634451)
+
