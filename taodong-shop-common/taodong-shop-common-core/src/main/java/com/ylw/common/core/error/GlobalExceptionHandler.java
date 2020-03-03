@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler extends BaseApiService<JSONObject> {
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public BaseResponse<JSONObject> exceptionHandler(Exception e) {
-        log.info("###全局捕获异常###,error:{}", e);
+        log.error("###全局捕获异常###,error:{}", e);
         return setResultError("系统错误!");
     }
 }

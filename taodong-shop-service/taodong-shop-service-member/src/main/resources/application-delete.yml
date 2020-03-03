@@ -25,3 +25,12 @@ swagger:
   contact:
     name: 杨林伟
     email: xxxxxx@qq.com
+### mybatis 日志打印
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.ylw.service.member.mapper: debug
+
+

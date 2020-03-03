@@ -9,21 +9,22 @@ import com.ylw.common.core.util.BeanUtils;
 import com.ylw.service.api.member.MemberService;
 import com.ylw.service.member.mapper.UserMapper;
 import com.ylw.service.member.mapper.entity.UserDo;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Slf4j
 public class MemberServiceImpl extends BaseApiService<UserOutDTO> implements MemberService {
     @Autowired
     private UserMapper userMapper;
 
     @Override
     public BaseResponse<UserOutDTO> existMobile(String mobile) {
-
-        if (true) {
+        /*if (true) {
             throw new RuntimeException("抛出个自定义的异常，6666666");
-        }
+        }*/
         // 1.验证参数
         if (StringUtils.isEmpty(mobile)) {
             return setResultError("手机号码不能为空!");
