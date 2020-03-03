@@ -21,4 +21,4 @@
 - [淘东电商项目（15） -项目配置信息分类](https://yanglinwei.blog.csdn.net/article/details/104412036)
 - [淘东电商项目（16） -会员注册功能](https://yanglinwei.blog.csdn.net/article/details/104423787)
 - [淘东电商项目（17） -DTO接口细分](https://yanglinwei.blog.csdn.net/article/details/104606609)
-
+- [淘东电商项目（18） -全局异常捕获](https://yanglinwei.blog.csdn.net/article/details/104627994)

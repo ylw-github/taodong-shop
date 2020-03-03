@@ -11,7 +11,7 @@
     <dependencies>
         <dependency>
             <groupId>com.ylw</groupId>
-            <artifactId>aodong-shop-api-weixin-dto</artifactId>
+            <artifactId>taodong-shop-api-weixin-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
         <dependency>
