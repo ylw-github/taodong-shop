@@ -24,4 +24,4 @@
 - [淘东电商项目（18） -全局异常捕获](https://yanglinwei.blog.csdn.net/article/details/104627994)
 - [淘东电商项目（19） -日志打印](https://yanglinwei.blog.csdn.net/article/details/104631478)
 - [淘东电商项目（20） -会员唯一登录](https://yanglinwei.blog.csdn.net/article/details/104634451)
-
+- [淘东电商项目（21） -Redis如何与数据库状态保持一致？](https://yanglinwei.blog.csdn.net/article/details/104652464)
