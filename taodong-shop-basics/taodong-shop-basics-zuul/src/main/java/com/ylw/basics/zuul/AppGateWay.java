@@ -60,7 +60,6 @@ public class AppGateWay {
         private List<SwaggerResource> resources() {
 
             List resources = new ArrayList<>();
-            // app-itmayiedu-order
             // 网关使用服务别名获取远程服务的SwaggerApi
             String swaggerDocJson = swaggerDocument();
             JSONArray jsonArray = JSONArray.parseArray(swaggerDocJson);
