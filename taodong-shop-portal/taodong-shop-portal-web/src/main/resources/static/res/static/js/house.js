@@ -1,10 +1,3 @@
-/**
- 
- @Name: 家居商城模板
- @Author: star1029
- @Copyright: layui.com
- */
-
 
 layui.define(['element', 'carousel', 'table', 'util'], function(exports){
   var $ = layui.$

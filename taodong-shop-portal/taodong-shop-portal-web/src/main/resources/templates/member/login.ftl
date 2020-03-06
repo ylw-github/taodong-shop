@@ -1,7 +1,7 @@
 <#include "../base/head.ftl"/>
 <div class="layui-fulid" id="house-login">
     <div class="layui-form">
-        <p>手机号登录 </p>
+        <p>登录 </p>
 
         <div class="layui-input-block login">
             <i class="layui-icon layui-icon-username"></i>

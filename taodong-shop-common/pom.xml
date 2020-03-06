@@ -12,5 +12,6 @@
 
 	<modules>
 		<module>taodong-shop-common-core</module>
+		<module>taodong-shop-common-web-core</module>
 	</modules>
 </project>

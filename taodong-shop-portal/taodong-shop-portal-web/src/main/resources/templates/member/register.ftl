@@ -50,7 +50,7 @@
 
 <div class="layui-fulid" id="house-login">
     <div class="layui-form">
-        <p>手机号登录</p>
+        <p>注册</p>
         <div class="layui-input-block login">
             <i class="layui-icon layui-icon-username"></i> <input type="text"
                                                                   required lay-verify="required" placeholder="请输入手机号码"
@@ -81,12 +81,20 @@
 
 
         <div class="layui-input-block getCode" style="margin-top: 12px;">
-            <input type="text" required lay-verify="required"
-                   placeholder="请输入验证码" class="layui-input">
-            <button class="layui-btn">获取验证码</button>
+            <input type="text" name="graphicCode"
+                   value="${(registerVo.graphicCode)!''}" placeholder="请输入验证码" class="layui-input">
+            <img alt="" src="getVerify" onclick="getVerify(this);"
+                 style="border: 1px solid #e2e2e2; font-size: 18px; height: 46px; margin-top: -69px; width: 44%; background-color: #e8d6c0; margin-left: 167px;">
         </div>
-        <button class="layui-btn" lay-submit lay-filter="user-login">注册</button>
+        <button class="layui-btn" lay-submit lay-filter="user-login" style="margin-top: 5px;">注册</button>
     </div>
 </div>
 
 <#include "../base/bottom.ftl"/>
+
+<script>
+    //获取验证码
+    function getVerify(obj) {
+        obj.src = "getVerify?" + Math.random();
+    }
+</script>

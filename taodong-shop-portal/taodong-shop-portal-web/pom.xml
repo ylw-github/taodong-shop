@@ -1,10 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.ylw</groupId>
-		<artifactId>taodong-shop-portal</artifactId>
-		<version>1.0-RELEASE</version>
-	</parent>
-	<artifactId>taodong-shop-portal-web</artifactId>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ylw</groupId>
+        <artifactId>taodong-shop-portal</artifactId>
+        <version>1.0-RELEASE</version>
+    </parent>
+    <artifactId>taodong-shop-portal-web</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-common-web-core</artifactId>
+            <version>1.0-RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
