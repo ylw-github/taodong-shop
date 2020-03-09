@@ -1,4 +1,4 @@
-import com.ylw.common.core.util.MD5Util;
+import com.ylw.common.web.core.util.MD5Util;
 import org.junit.Test;
 
 public class TestMD5 {

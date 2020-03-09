@@ -1,6 +1,6 @@
-package com.ylw.portal.web.controller.code;
+package com.ylw.member.controller;
 
-import com.ylw.common.core.util.RandomValidateCodeUtil;
+import com.ylw.common.web.core.util.RandomValidateCodeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

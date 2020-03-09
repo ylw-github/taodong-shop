@@ -12,7 +12,11 @@
             <groupId>com.ylw</groupId>
             <artifactId>taodong-shop-common-web-core</artifactId>
             <version>1.0-RELEASE</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-service-api-member</artifactId>
+            <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>
 </project>

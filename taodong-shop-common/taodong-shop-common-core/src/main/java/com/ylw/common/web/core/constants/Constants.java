@@ -1,4 +1,4 @@
-package com.ylw.common.core.constants;
+package com.ylw.common.web.core.constants;
 
 /**
  * description: 统一常量信息

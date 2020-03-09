@@ -2,12 +2,12 @@ package com.ylw.service.member.impl;
 
 
 import com.ylw.api.member.dto.output.UserOutDTO;
-import com.ylw.common.core.api.BaseApiService;
-import com.ylw.common.core.constants.Constants;
-import com.ylw.common.core.entity.BaseResponse;
-import com.ylw.common.core.util.BeanUtils;
-import com.ylw.common.core.util.GenerateToken;
-import com.ylw.common.core.util.TypeCastHelper;
+import com.ylw.common.web.core.api.BaseApiService;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
+import com.ylw.common.web.core.util.BeanUtils;
+import com.ylw.common.web.core.util.GenerateToken;
+import com.ylw.common.web.core.util.TypeCastHelper;
 import com.ylw.service.api.member.MemberService;
 import com.ylw.service.member.mapper.UserMapper;
 import com.ylw.service.member.mapper.entity.UserDo;

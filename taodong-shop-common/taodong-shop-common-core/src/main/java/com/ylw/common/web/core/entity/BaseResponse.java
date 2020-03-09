@@ -1,4 +1,4 @@
-package com.ylw.common.core.entity;
+package com.ylw.common.web.core.entity;
 
 import lombok.Data;
 

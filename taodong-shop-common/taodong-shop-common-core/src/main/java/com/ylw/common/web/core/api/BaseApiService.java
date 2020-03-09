@@ -1,6 +1,6 @@
-package com.ylw.common.core.api;
-import com.ylw.common.core.constants.Constants;
-import com.ylw.common.core.entity.BaseResponse;
+package com.ylw.common.web.core.api;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 

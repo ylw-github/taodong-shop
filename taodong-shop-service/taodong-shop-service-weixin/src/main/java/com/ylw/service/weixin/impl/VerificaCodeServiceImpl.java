@@ -1,10 +1,10 @@
 package com.ylw.service.weixin.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.ylw.common.core.api.BaseApiService;
-import com.ylw.common.core.constants.Constants;
-import com.ylw.common.core.entity.BaseResponse;
-import com.ylw.common.core.util.RedisUtil;
+import com.ylw.common.web.core.api.BaseApiService;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
+import com.ylw.common.web.core.util.RedisUtil;
 import com.ylw.service.api.weixin.VerificaCodeService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

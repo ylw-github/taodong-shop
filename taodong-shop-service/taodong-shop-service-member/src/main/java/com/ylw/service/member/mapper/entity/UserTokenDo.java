@@ -1,6 +1,6 @@
 package com.ylw.service.member.mapper.entity;
 
-import com.ylw.common.core.entity.BaseDo;
+import com.ylw.common.web.core.entity.BaseDo;
 import lombok.Data;
 
 @Data

@@ -1,4 +1,4 @@
-package com.ylw.portal.web.controller;
+package com.ylw.member.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

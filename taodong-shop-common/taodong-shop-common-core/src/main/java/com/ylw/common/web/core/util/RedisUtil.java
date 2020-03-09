@@ -1,4 +1,4 @@
-package com.ylw.common.core.util;
+package com.ylw.common.web.core.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

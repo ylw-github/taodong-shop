@@ -1,7 +1,7 @@
 package com.ylw.service.api.member;
 
 import com.ylw.api.member.dto.output.UserOutDTO;
-import com.ylw.common.core.entity.BaseResponse;
+import com.ylw.common.web.core.entity.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;

@@ -2,7 +2,7 @@ package com.ylw.service.api.member;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ylw.api.member.dto.intput.UserInDTO;
-import com.ylw.common.core.entity.BaseResponse;
+import com.ylw.common.web.core.entity.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;

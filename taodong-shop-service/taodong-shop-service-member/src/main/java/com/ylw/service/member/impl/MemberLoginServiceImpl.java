@@ -2,12 +2,12 @@ package com.ylw.service.member.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ylw.api.member.dto.intput.UserLoginInDTO;
-import com.ylw.common.core.api.BaseApiService;
-import com.ylw.common.core.constants.Constants;
-import com.ylw.common.core.entity.BaseResponse;
-import com.ylw.common.core.util.GenerateToken;
-import com.ylw.common.core.util.MD5Util;
-import com.ylw.common.core.util.RedisDataSoureceTransaction;
+import com.ylw.common.web.core.api.BaseApiService;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
+import com.ylw.common.web.core.util.GenerateToken;
+import com.ylw.common.web.core.util.MD5Util;
+import com.ylw.common.web.core.util.RedisDataSoureceTransaction;
 import com.ylw.service.api.member.MemberLoginService;
 import com.ylw.service.member.mapper.UserMapper;
 import com.ylw.service.member.mapper.UserTokenMapper;

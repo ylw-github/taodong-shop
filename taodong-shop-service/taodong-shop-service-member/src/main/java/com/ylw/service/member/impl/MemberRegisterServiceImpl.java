@@ -2,11 +2,11 @@ package com.ylw.service.member.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ylw.api.member.dto.intput.UserInDTO;
-import com.ylw.common.core.api.BaseApiService;
-import com.ylw.common.core.constants.Constants;
-import com.ylw.common.core.entity.BaseResponse;
-import com.ylw.common.core.util.BeanUtils;
-import com.ylw.common.core.util.MD5Util;
+import com.ylw.common.web.core.api.BaseApiService;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
+import com.ylw.common.web.core.util.BeanUtils;
+import com.ylw.common.web.core.util.MD5Util;
 import com.ylw.service.api.member.MemberRegisterService;
 import com.ylw.service.member.feign.VerificaCodeServiceFeign;
 import com.ylw.service.member.mapper.UserMapper;
@@ -27,10 +27,10 @@ public class MemberRegisterServiceImpl extends BaseApiService<JSONObject> implem
 	@Transactional
 	public BaseResponse<JSONObject> register(@RequestBody UserInDTO userInDTO, String registCode) {
 		// 1.参数验证
-		String userName = userInDTO.getUserName();
+		/*String userName = userInDTO.getUserName();
 		if (StringUtils.isEmpty(userName)) {
 			return setResultError("用户名称不能为空!");
-		}
+		}*/
 		String mobile = userInDTO.getMobile();
 		if (StringUtils.isEmpty(mobile)) {
 			return setResultError("手机号码不能为空!");

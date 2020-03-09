@@ -1,4 +1,4 @@
-package com.ylw.common.core.util;
+package com.ylw.common.web.core.util;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
