@@ -29,3 +29,4 @@
 - [淘东电商项目（23） -门户界面](https://blog.csdn.net/qq_20042935/article/details/104673329)
 - [淘东电商项目（24） -获取验证码功能](https://blog.csdn.net/qq_20042935/article/details/104698110)
 - [淘东电商项目（25） -门户注册功能](https://yanglinwei.blog.csdn.net/article/details/104748222)
+- [淘东电商项目（26） -门户登录功能](https://yanglinwei.blog.csdn.net/article/details/104777872)
