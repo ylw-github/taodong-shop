@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../res/layui/css/layui.css">
     <link rel="stylesheet" href="../res/static/css/index.css">
+    <script src="../res/static/js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function logout() {
+            $.ajax({
+                type: "delete",
+                url: "exit",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (result) {
+                    window.location.href = "/";
+                },
+                error: function (result) {
+                }
+            });
+        }
+
+    </script>
 </head>
 <body>
 
@@ -16,7 +34,7 @@
            <#if desensMobile??>
                <a href="">${desensMobile}</a>
                <a href="">我的订单</a>
-               <a href="/exit">退出</a>
+               <a href="javascript:void(0);" onclick="logout();">退出</a>
            <#else >
                <a href="login">登录</a>
            </#if>
@@ -53,3 +71,4 @@
         </button>
     </div>
 </div>
+

@@ -1,7 +1,12 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka
 server:
   port: 8080
-#### 整合freemarker
 spring:
+  application:
+    name: app-portal-web
   freemarker:
     cache: false
     charset: UTF-8
@@ -13,12 +18,3 @@ spring:
     suffix: .ftl
     template-loader-path:
       - classpath:/templates
-  application:
-    name: app-portal-web
-
-###服务注册到eureka地址
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.162.135:8080/eureka
-

@@ -36,7 +36,7 @@ taodong:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.162.135:8080/eureka
+      defaultZone: http://127.0.0.1:8100/eureka
 ####swagger相关配置
 swagger:
   base-package: com.ylw
@@ -52,9 +52,8 @@ app:
 wx:
   mp:
     configs:
-      - appId: wx????f95 #（一个公众号的appid）
-        secret: bb?????e1c3 #（公众号的appsecret）
-        token: ylw666 #（接口配置里的Token值）
-        #aesKey:  111（接口配置里的EncodingAESKey值）
+      -   appId: wx2a6cc78591726f95
+          secret: bb422c78819d29f14834f5215e82e1c3
+          token: ylw666
 
 

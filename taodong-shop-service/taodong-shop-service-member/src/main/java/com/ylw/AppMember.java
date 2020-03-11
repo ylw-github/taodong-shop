@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableSwagger2Doc
-@EnableApolloConfig
+//@EnableApolloConfig
 @MapperScan(basePackages = "com.ylw.service.member.mapper")
 public class AppMember {
 

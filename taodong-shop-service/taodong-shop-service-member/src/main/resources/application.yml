@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.162.135:8080/eureka
+      defaultZone: http://127.0.0.1:8100/eureka
 ####swagger相关配置
 swagger:
   base-package: com.ylw

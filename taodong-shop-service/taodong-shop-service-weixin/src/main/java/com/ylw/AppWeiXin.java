@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableSwagger2Doc
 @EnableFeignClients
-@EnableApolloConfig
+//@EnableApolloConfig
 @ComponentScan(basePackages = "com.ylw")
 public class AppWeiXin {
 

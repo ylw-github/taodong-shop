@@ -43,11 +43,6 @@ public class LoginController extends BaseWebController {
      */
     private static final String REDIRECT_INDEX = "redirect:/";
 
-    /**
-     * 跳转页面
-     *
-     * @return
-     */
     @GetMapping("/login")
     public String getLogin() {
         return MB_LOGIN_FTL;
@@ -94,5 +89,7 @@ public class LoginController extends BaseWebController {
         CookieUtils.setCookie(request, response, WebConstants.LOGIN_TOKEN_COOKIENAME, token);
         return REDIRECT_INDEX;
     }
+
+
 
 }

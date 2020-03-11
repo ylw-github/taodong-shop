@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-@EnableApolloConfig
+//@EnableApolloConfig
 @EnableEurekaClient
 @EnableFeignClients
 public class AppPortalWeb {
