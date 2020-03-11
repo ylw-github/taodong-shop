@@ -30,7 +30,7 @@
       </span>
         </div>
         <div class="house-banner layui-form">
-            <a class="banner" href="index.html">
+            <a class="banner" href="/">
                 <img src="../res/static/img/taodong.png" alt="淘东商城">
             </a>
             <div class="layui-input-inline">
@@ -41,7 +41,7 @@
                         class="layui-badge">1</span></a>
         </div>
         <ul class="layui-nav close">
-            <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
+            <li class="layui-nav-item layui-this"><a href="/">首页</a></li>
             <li class="layui-nav-item"><a href="list.html">新鲜水果</a></li>
             <li class="layui-nav-item"><a href="list.html">海鲜水产</a></li>
             <li class="layui-nav-item"><a href="list.html">精选肉类</a></li>
