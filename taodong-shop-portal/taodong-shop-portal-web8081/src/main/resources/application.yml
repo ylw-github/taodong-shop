@@ -3,7 +3,7 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8100/eureka
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
     name: app-portal-web

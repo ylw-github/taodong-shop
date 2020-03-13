@@ -16,6 +16,7 @@
         <module>taodong-shop-portal-spike</module>
         <module>taodong-shop-portal-sso</module>
         <module>taodong-shop-portal-web</module>
+        <module>taodong-shop-portal-web8081</module>
     </modules>
     <dependencies>
         <dependency>
@@ -36,6 +37,19 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会报错 -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
         </dependency>
     </dependencies>
 </project>
