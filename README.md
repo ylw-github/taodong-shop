@@ -34,3 +34,5 @@
 - [淘东电商项目（28） -QQ授权登录实现思路](https://yanglinwei.blog.csdn.net/article/details/104800068)
 - [淘东电商项目（29） -动静分离的实现思路](https://yanglinwei.blog.csdn.net/article/details/104822219)
 - [淘东电商项目（30） -解决分布式Session共享问题](https://yanglinwei.blog.csdn.net/article/details/104823374)
+- [淘东电商项目（31） -SSO单点登录（XXL-SSO案例）](https://yanglinwei.blog.csdn.net/article/details/104899197)
+- [淘东电商项目（32） -SSO单点登录（集成SSO认证服务）](https://yanglinwei.blog.csdn.net/article/details/104942952)

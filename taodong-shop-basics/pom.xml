@@ -17,6 +17,7 @@
 		<module>taodong-shop-basics-xxljob</module>
 		<module>taodong-shop-basics-zipkin</module>
 		<module>taodong-shop-basics-zuul</module>
+		<module>taodong-shop-basics-xxlsso-server</module>
 	</modules>
 
 	<dependencies>
