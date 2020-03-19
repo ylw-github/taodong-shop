@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author xuxueli 2015-12-12 18:09:04
+ * create by: YangLinWei
+ * create time: 2020/3/19 9:17 上午
  */
 public class PermissionInterceptor implements HandlerInterceptor {
 

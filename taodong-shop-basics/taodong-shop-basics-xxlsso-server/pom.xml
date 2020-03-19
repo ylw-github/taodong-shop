@@ -17,5 +17,20 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-common-web-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-service-api-member</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
     </dependencies>
 </project>

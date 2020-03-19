@@ -2,6 +2,8 @@ package com.ylw.service.api.member;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ylw.api.member.dto.intput.UserLoginInDTO;
+import com.ylw.api.member.dto.output.UserLoginInOutDTO;
+import com.ylw.api.member.dto.output.UserOutDTO;
 import com.ylw.common.web.core.entity.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,4 +27,14 @@ public interface MemberLoginService {
     @ApiOperation(value = "会员用户登陆信息接口")
     BaseResponse<JSONObject> login(@RequestBody UserLoginInDTO userLoginInDTO);
 
+
+    /**
+     * 用户登录接口
+     *
+     * @param userLoginInDTO
+     * @return
+     */
+    @PostMapping("/ssoLogin")
+    @ApiOperation(value = "会员用户登陆信息接口")
+    BaseResponse<UserLoginInOutDTO> ssoLogin(@RequestBody UserLoginInDTO userLoginInDTO);
 }

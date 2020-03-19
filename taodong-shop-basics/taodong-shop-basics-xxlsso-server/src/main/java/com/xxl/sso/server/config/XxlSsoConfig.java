@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author xuxueli 2018-04-03 20:41:07
+ * description: SSO 配置
+ * create by: YangLinWei
+ * create time: 2020/3/19 9:16 上午
  */
 @Configuration
 public class XxlSsoConfig implements InitializingBean, DisposableBean {

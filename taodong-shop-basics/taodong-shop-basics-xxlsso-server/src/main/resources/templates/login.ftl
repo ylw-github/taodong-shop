@@ -1,55 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>统一认证中心</title>
-
-    <#import "common/common.macro.ftl" as netCommon>
-    <@netCommon.commonStyle />
-    <link rel="stylesheet" href="${request.contextPath}/static/adminlte/plugins/iCheck/square/blue.css">
-
+    <meta charset="UTF-8">
+    <title>淘东商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../static/res/layui/css/layui.css">
+    <link rel="stylesheet" href="../static/res/static/css/index.css">
+    <script src="../static/res/static/js/jquery.min.js"></script>
 </head>
-<body class="hold-transition login-page">
+<body>
+<div class="layui-fulid" id="house-login">
+    <form action="login" method="post">
+        <div class="layui-form">
+            <p>手机号登录</p>
 
-    <div class="login-box">
-        <div class="login-logo">
-            <a><b>XXL</b>SSO</a>
-        </div>
-        <form action="${request.contextPath}/doLogin">
-            <div class="login-box-body">
-                <p class="login-box-msg">统一认证中心</p>
-                <div class="form-group has-feedback">
-                    <input type="text" name="username" class="form-control" placeholder="Please input username." value="user" maxlength="50" >
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="Please input password." value="123456" maxlength="50" >
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-
-                <#if errorMsg?exists>
-                    <p style="color: red;">${errorMsg}</p>
-                </#if>
-
-                <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox" name="ifRemember" >记住密码
-                            </label>
-                        </div>
-                    </div><!-- /.col -->
-                    <div class="col-xs-4">
-                        <input type="hidden" name="redirect_url" value="${redirect_url!''}" />
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
-                    </div>
-                </div>
+            <div class="layui-input-block login">
+                <i class="layui-icon layui-icon-username"></i> <input type="text"
+                                                                      required lay-verify="required" name="mobile"
+                                                                      value="${(loginVo.mobile)!''}"
+                                                                      placeholder="请输入手机号码"
+                                                                      class="layui-input">
             </div>
-        </form>
-    </div>
 
-</body>
-<@netCommon.commonScript />
-<script src="${request.contextPath}/static/adminlte/plugins/iCheck/icheck.min.js"></script>
-<script src="${request.contextPath}/static/js/login.1.js"></script>
-</html>
+            <div class="layui-input-block login">
+                <i class="layui-icon layui-icon-vercode"></i> <input
+                        type="password" required lay-verify="required" name="password"
+                        value="${(loginVo.password)!''}" placeholder="请输入密码"
+                        class="layui-input">
+            </div>
+
+            <div class="layui-input-block getCode">
+                <input type="text" name="graphicCode" required lay-verify="required"
+                       placeholder="请输入验证码" class="layui-input"> <img alt=""
+                                                                      src="getVerify" onclick="getVerify(this);"
+                                                                      style="border: 1px solid #e2e2e2;font-size: 18px;height: 48px;margin-top: -93px;width: 44%;background-color: #e8d6c0;margin-left: 166px;">
+            </div>
+            <span
+                    style="color: red; font-size: 20px; font-weight: bold; font-family: '楷体', '楷体_GB2312';">${error!''}</span>
+            <button class="layui-btn" style="margin-top: 5px;" lay-submit lay-filter="user-login">登录</button>
+        </div>
+    </form>
+</div>
+
+<#include "base/bottom.ftl"/>
