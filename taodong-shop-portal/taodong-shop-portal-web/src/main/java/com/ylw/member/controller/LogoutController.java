@@ -1,6 +1,9 @@
 package com.ylw.member.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.xxl.sso.core.conf.Conf;
+import com.xxl.sso.core.login.SsoWebLoginHelper;
+import com.xxl.sso.core.user.XxlSsoUser;
 import com.ylw.common.web.core.base.BaseWebController;
 import com.ylw.common.web.core.constants.WebConstants;
 import com.ylw.common.web.core.entity.BaseResponse;
@@ -34,5 +37,19 @@ public class LogoutController extends BaseWebController {
             return memberLogoutServiceFeign.logout(token);
         }
         return null;
+    }
+
+    @DeleteMapping("/ssoExit")
+    @ResponseBody
+    public BaseResponse<JSONObject> logout(HttpServletRequest request, HttpServletResponse response, Model model) {
+
+        // logout
+        BaseResponse<JSONObject> result = null;
+        XxlSsoUser xxlUser = (XxlSsoUser) request.getAttribute(Conf.SSO_USER);
+        SsoWebLoginHelper.logout(request, response);
+        if (xxlUser != null && StringUtils.isNotEmpty(xxlUser.getUserid())) {
+            result = memberLogoutServiceFeign.ssoLogout(xxlUser.getUserid());
+        }
+        return result;
     }
 }

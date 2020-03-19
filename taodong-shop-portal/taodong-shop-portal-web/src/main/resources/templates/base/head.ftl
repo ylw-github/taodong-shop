@@ -12,7 +12,8 @@
         function logout() {
             $.ajax({
                 type: "delete",
-                url: "exit",
+                //url: "exit",
+                url: "ssoExit",
                 contentType: "application/json",
                 dataType: "json",
                 success: function (result) {

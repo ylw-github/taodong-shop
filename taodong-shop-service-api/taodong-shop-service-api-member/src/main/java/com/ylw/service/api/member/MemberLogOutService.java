@@ -25,4 +25,15 @@ public interface MemberLogOutService {
     @ApiOperation(value = "/logout")
     BaseResponse<JSONObject> logout(@RequestParam("token") String token);
 
+
+    /**
+     * 用户登出接口
+     *
+     * @param token
+     * @return
+     */
+    @DeleteMapping("/ssoLogout")
+    @ApiOperation(value = "/ssoLogout")
+    BaseResponse<JSONObject> ssoLogout(@RequestParam("token") String token);
+
 }
