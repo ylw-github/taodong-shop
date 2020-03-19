@@ -66,4 +66,9 @@ public class UserDo {
 	 * 用户关联 微信 开放ID
 	 */
 	private String wxOpenid;
+
+	/**
+	 * 用户token
+	 */
+	private String token;
 }

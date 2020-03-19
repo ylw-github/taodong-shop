@@ -132,7 +132,7 @@ public class WebController extends BaseWebController {
 
 
         XxlSsoUser xxlUser = new XxlSsoUser();
-        xxlUser.setUserid(String.valueOf(data.getUserId()));
+        xxlUser.setUserid(data.getToken());
         xxlUser.setUsername(data.getUserName());
         xxlUser.setVersion(UUID.randomUUID().toString().replaceAll("-", ""));
         xxlUser.setExpireMinute(SsoLoginStore.getRedisExpireMinute());

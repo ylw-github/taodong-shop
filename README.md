@@ -38,3 +38,4 @@
 - [淘东电商项目（32） -SSO单点登录（集成SSO认证服务）](https://yanglinwei.blog.csdn.net/article/details/104942952)
 - [淘东电商项目（33） -SSO单点登录（改造SSO认证服务登录界面）](https://yanglinwei.blog.csdn.net/article/details/104945652)
 - [淘东电商项目（34） -SSO单点登录（Client端集成）](https://yanglinwei.blog.csdn.net/article/details/104960964)
+- [淘东电商项目（35） -SSO单点登录（登录功能完善）](https://yanglinwei.blog.csdn.net/article/details/104960448)

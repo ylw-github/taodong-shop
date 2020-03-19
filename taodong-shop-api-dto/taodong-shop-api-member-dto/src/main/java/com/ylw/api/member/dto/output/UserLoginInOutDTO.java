@@ -32,4 +32,10 @@ public class UserLoginInOutDTO {
 	@ApiModelProperty(value = "用户名称")
 	private String userName;
 
+	/**
+	 * token生成的令牌
+	 */
+	@ApiModelProperty(value = "用户令牌")
+	private String token;
+
 }

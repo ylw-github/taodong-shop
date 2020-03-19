@@ -18,8 +18,11 @@ import com.ylw.service.member.mapper.entity.UserTokenDo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.UUID;
 
 @RestController
 public class MemberLoginServiceImpl extends BaseApiService<JSONObject> implements MemberLoginService {
@@ -126,6 +129,7 @@ public class MemberLoginServiceImpl extends BaseApiService<JSONObject> implement
     }
 
     @Override
+    @Transactional
     public BaseResponse<UserLoginInOutDTO> ssoLogin(@RequestBody UserLoginInDTO userLoginInpDTO) {
         // 1.验证参数
         String mobile = userLoginInpDTO.getMobile();
@@ -159,6 +163,30 @@ public class MemberLoginServiceImpl extends BaseApiService<JSONObject> implement
         if (userDo == null) {
             return setSSOResultError("用户名称或者密码错误!");
         }
+
+        //token操作
+
+        Long userId = userDo.getUserId();
+        // 2.生成用户令牌Key
+        String keyPrefix = Constants.MEMBER_TOKEN_KEYPREFIX + loginType;
+        UserTokenDo userTokenDo = userTokenMapper.selectByUserIdAndLoginType(userId, loginType);
+        if (userTokenDo != null) {
+            // 如果登陆过 清除之前redistoken
+            String oriToken = userTokenDo.getToken();
+            userTokenMapper.updateTokenAvailability(oriToken);
+        }
+
+        // 4.将用户生成的令牌插入到Token记录表中
+        UserTokenDo userToken = new UserTokenDo();
+        userToken.setUserId(userId);
+        userToken.setLoginType(userLoginInpDTO.getLoginType());
+        String newToken = keyPrefix + UUID.randomUUID().toString().replace("-", "");
+        userToken.setToken(newToken);
+        userToken.setDeviceInfor(deviceInfor);
+        userTokenMapper.insertUserToken(userToken);
+
+        userDo.setToken(newToken);
+
         return setSSOResultSuccess(BeanUtils.doToDto(userDo, UserLoginInOutDTO.class));
     }
 
