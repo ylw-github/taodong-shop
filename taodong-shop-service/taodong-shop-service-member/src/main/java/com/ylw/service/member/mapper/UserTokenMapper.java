@@ -44,4 +44,9 @@ public interface UserTokenMapper {
 	 */
 	@Insert("    INSERT INTO `user_token` VALUES (null, #{token},#{loginType}, #{deviceInfor}, 0, #{userId} ,now(),null ); ")
 	int insertUserToken(UserTokenDo userTokenDo);
+
+	@Select("SELECT id as id ,token as token ,login_type as LoginType, device_infor as deviceInfor ,is_availability as isAvailability,user_id as userId"
+			+ "" + ""
+			+ " , create_time as createTime,update_time as updateTime   FROM user_token WHERE token=#{token} and is_availability ='0'; ")
+	UserTokenDo selectByToken(String token);
 }

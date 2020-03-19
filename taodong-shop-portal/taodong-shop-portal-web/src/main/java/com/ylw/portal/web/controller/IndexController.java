@@ -1,5 +1,7 @@
 package com.ylw.portal.web.controller;
 
+import com.xxl.sso.core.conf.Conf;
+import com.xxl.sso.core.user.XxlSsoUser;
 import com.ylw.api.member.dto.output.UserOutDTO;
 import com.ylw.common.web.core.base.BaseWebController;
 import com.ylw.common.web.core.constants.WebConstants;
@@ -32,11 +34,12 @@ public class IndexController extends BaseWebController {
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, HttpServletResponse response, Model model) {
-        // 1.从cookie 中 获取 会员token
-        String token = CookieUtils.getCookieValue(request, WebConstants.LOGIN_TOKEN_COOKIENAME, true);
-        if (!StringUtils.isEmpty(token)) {
+
+        XxlSsoUser xxlUser = (XxlSsoUser) request.getAttribute(Conf.SSO_USER);
+
+        if (xxlUser != null && StringUtils.isNotEmpty(xxlUser.getUserid())) {
             // 2.调用会员服务接口,查询会员用户信息
-            BaseResponse<UserOutDTO> userInfo = memberServiceFeign.getInfo(token);
+            BaseResponse<UserOutDTO> userInfo = memberServiceFeign.getInfo(xxlUser.getUserid());
             if (isSuccess(userInfo)) {
                 UserOutDTO data = userInfo.getData();
                 if (data != null) {
