@@ -6,18 +6,14 @@
         <artifactId>taodong-shop-portal</artifactId>
         <version>1.0-RELEASE</version>
     </parent>
-    <artifactId>taodong-shop-portal-web</artifactId>
+    <artifactId>taodong-shop-portal-pay-web</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.ylw</groupId>
             <artifactId>taodong-shop-common-web-core</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>com.ylw</groupId>
-            <artifactId>taodong-shop-service-api-member</artifactId>
-            <version>1.0-RELEASE</version>
-        </dependency>
+
         <dependency>
             <groupId>com.ylw</groupId>
             <artifactId>taodong-shop-common-xxlsso-core</artifactId>

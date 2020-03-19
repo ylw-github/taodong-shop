@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="layui-fulid" id="house-login">
-    <form action="login" method="post">
+    <form action="doLogin" method="post">
         <div class="layui-form">
             <p>手机号登录</p>
 
@@ -35,8 +35,8 @@
                                                                       src="getVerify" onclick="getVerify(this);"
                                                                       style="border: 1px solid #e2e2e2;font-size: 18px;height: 48px;margin-top: -93px;width: 44%;background-color: #e8d6c0;margin-left: 166px;">
             </div>
-            <span
-                    style="color: red; font-size: 20px; font-weight: bold; font-family: '楷体', '楷体_GB2312';">${error!''}</span>
+            <span style="color: red; font-size: 20px; font-weight: bold; font-family: '楷体', '楷体_GB2312';">${error!''}</span>
+            <input type="hidden" name="redirect_url" value="${RequestParameters['redirect_url']!''}" />
             <button class="layui-btn" style="margin-top: 5px;" lay-submit lay-filter="user-login">登录</button>
         </div>
     </form>

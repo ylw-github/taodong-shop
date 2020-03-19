@@ -19,7 +19,7 @@ spring:
     template-loader-path:
       - classpath:/templates
   redis:
-    host: 192.168.162.136
+    host: 127.0.0.1
     port: 6379
     jedis:
       pool:
@@ -27,3 +27,11 @@ spring:
         min-idle: 1
         max-active: 1000
         max-wait: -1
+xxl:
+  sso:
+    logout:
+      path: /logout
+    server: http://taodong.ssoserver.com:8099
+xxl-sso:
+  excluded:
+    paths: ''

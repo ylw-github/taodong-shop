@@ -17,6 +17,7 @@
         <module>taodong-shop-portal-sso</module>
         <module>taodong-shop-portal-web</module>
         <module>taodong-shop-portal-web8081</module>
+        <module>taodong-shop-portal-pay-web</module>
     </modules>
     <dependencies>
         <dependency>

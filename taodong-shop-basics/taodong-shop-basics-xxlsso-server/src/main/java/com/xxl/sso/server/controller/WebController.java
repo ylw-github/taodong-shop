@@ -64,29 +64,14 @@ public class WebController extends BaseWebController {
         }
     }
 
+    @RequestMapping(Conf.SSO_LOGIN)
+    public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-    @GetMapping("/login")
-    public String getLogin() {
-        return MB_LOGIN_FTL;
-    }
+        // login check
+        XxlSsoUser xxlUser = SsoWebLoginHelper.loginCheck(request, response);
 
-    /**
-     * 接受请求参数
-     *
-     * @return
-     */
-    @PostMapping("/login")
-    public String postLogin(@ModelAttribute("loginVo") @Validated LoginVo loginVo,
-							BindingResult bindingResult, Model model, HttpServletRequest request,
-                            HttpServletResponse response, HttpSession httpSession, String ifRemember) {
-
-
-
-        String cookieSessionId = CookieUtil.getValue(request, Conf.SSO_SESSIONID);
-        XxlSsoUser xxlUser = SsoTokenLoginHelper.loginCheck(cookieSessionId);
-
-        // TODO 1.已经登录过
         if (xxlUser != null) {
+
             // success redirect
             String redirectUrl = request.getParameter(Conf.REDIRECT_URL);
             if (redirectUrl!=null && redirectUrl.trim().length()>0) {
@@ -100,7 +85,23 @@ public class WebController extends BaseWebController {
             }
         }
 
-        // TODO 2.没有登录过的，执行登录操作
+        model.addAttribute("errorMsg", request.getParameter("errorMsg"));
+        model.addAttribute(Conf.REDIRECT_URL, request.getParameter(Conf.REDIRECT_URL));
+        return "login";
+    }
+
+
+    /**
+     * 接受请求参数
+     *
+     * @return
+     */
+    @PostMapping("/doLogin")
+    public String postLogin(@ModelAttribute("loginVo") @Validated LoginVo loginVo,
+                            BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes, HttpServletRequest request,
+                            HttpServletResponse response, HttpSession httpSession, String ifRemember) {
+
+
         if (bindingResult.hasErrors()) {
             // 如果参数有错误的话
             // 获取第一个错误!
@@ -122,7 +123,7 @@ public class WebController extends BaseWebController {
         String info = webBrowserInfo(request);
         userLoginInpDTO.setDeviceInfor(info);
         BaseResponse<UserLoginInOutDTO> login = memberLoginServiceFeign.ssoLogin(userLoginInpDTO);
-        if(!isSuccess(login)){
+        if (!isSuccess(login)) {
             setErrorMsg(model, login.getMsg());
             return MB_LOGIN_FTL;
         }
@@ -130,7 +131,7 @@ public class WebController extends BaseWebController {
         UserLoginInOutDTO data = login.getData();
 
 
-        xxlUser = new XxlSsoUser();
+        XxlSsoUser xxlUser = new XxlSsoUser();
         xxlUser.setUserid(String.valueOf(data.getUserId()));
         xxlUser.setUsername(data.getUserName());
         xxlUser.setVersion(UUID.randomUUID().toString().replaceAll("-", ""));
@@ -139,6 +140,7 @@ public class WebController extends BaseWebController {
 
         // 设置sessionid
         String sessionId = SsoSessionIdHelper.makeSessionId(xxlUser);
+
 
         // 认证服务登录
         boolean ifRem = (ifRemember != null && "on".equals(ifRemember)) ? true : false;
