@@ -1,0 +1,46 @@
+###服务启动端口号
+server:
+  port: 8500
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: taodong-shop-service-goods
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taodong-goods?characterEncoding=utf8&useSSL=false
+  redis:
+    host: 127.0.0.1
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 100
+        max-wait: -1
+        min-idle: 1
+    port: 6379
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch-cluster
+      cluster-nodes: 192.168.162.134:9301,192.168.162.134:9302
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka
+####swagger相关配置
+swagger:
+  base-package: com.ylw
+  title: 淘东电商项目-商品服务接口
+  description: 该项目“基于SpringCloud2.x构建微服务电商项目。
+  version: 1.1
+  terms-of-service-url: www.xxx.com
+  contact:
+    name: 杨林伟
+    email: xxxxxx@qq.com
+
+
+
+
+
+

@@ -10,6 +10,7 @@
 
 	<packaging>pom</packaging>
 	<modules>
+		<module>taodong-shop-service-api-goods</module>
 		<module>taodong-shop-service-api-item</module>
 		<module>taodong-shop-service-api-member</module>
 		<module>taodong-shop-service-api-order</module>

@@ -11,6 +11,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>taodong-shop-service-goods</module>
 		<module>taodong-shop-service-item</module>
 		<module>taodong-shop-service-member</module>
 		<module>taodong-shop-service-order</module>
