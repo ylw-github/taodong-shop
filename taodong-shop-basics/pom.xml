@@ -18,6 +18,7 @@
 		<module>taodong-shop-basics-zipkin</module>
 		<module>taodong-shop-basics-zuul</module>
 		<module>taodong-shop-basics-xxlsso-server</module>
+		<module>taodong-shop-basics-elk-kafka</module>
 	</modules>
 
 	<dependencies>

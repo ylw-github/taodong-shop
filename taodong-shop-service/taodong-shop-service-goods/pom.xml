@@ -10,6 +10,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.ylw</groupId>
+			<artifactId>taodong-shop-basics-elk-kafka</artifactId>
+			<version>1.0-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ylw</groupId>
 			<artifactId>taodong-shop-service-api-goods</artifactId>
 			<version>1.0-RELEASE</version>
 		</dependency>

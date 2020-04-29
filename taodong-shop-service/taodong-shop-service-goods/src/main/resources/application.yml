@@ -23,6 +23,8 @@ spring:
     elasticsearch:
       cluster-name: elasticsearch-cluster
       cluster-nodes: 192.168.162.134:9301,192.168.162.134:9302
+  kafka:
+    bootstrap-servers: 192.168.162.134:9092
 ###服务注册到eureka地址
 eureka:
   client:
