@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * create by: YangLinWei
  * create time: 2020/3/3 11:09 上午
  */
-@ControllerAdvice
-@Slf4j
+/*@ControllerAdvice
+@Slf4j*/
 public class GlobalExceptionHandler extends BaseApiService<JSONObject> {
 
-    @ExceptionHandler(RuntimeException.class)
+    /*@ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public BaseResponse<JSONObject> exceptionHandler(Exception e) {
         log.error("###全局捕获异常###,error:{}", e);
         return setResultError("系统错误!");
-    }
+    }*/
 }

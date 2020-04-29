@@ -26,6 +26,9 @@ public class ProductSearchServiceImpl extends BaseApiService<List<ProductDto>> i
 
     @Override
     public BaseResponse<List<ProductDto>> search(String name) {
+       /* if(true){
+            throw new RuntimeException("模拟异常");
+        }*/
         // 1.拼接查询条件
         BoolQueryBuilder builder = QueryBuilders.boolQuery();
         // 2.模糊查询name字段
