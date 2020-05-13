@@ -46,4 +46,16 @@ public class BaseApiService<T> {
 	public Boolean toDaoResult(int result) {
 		return result > 0 ? true : false;
 	}
+
+	// 接口直接返回true 或者false
+	public Boolean isSuccess(BaseResponse<?> baseResp) {
+		if (baseResp == null) {
+			return false;
+		}
+		if (baseResp.getCode().equals(Constants.HTTP_RES_CODE_500)) {
+			return false;
+		}
+		return true;
+	}
+
 }
