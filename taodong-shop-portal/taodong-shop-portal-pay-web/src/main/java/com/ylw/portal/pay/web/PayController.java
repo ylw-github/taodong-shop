@@ -1,5 +1,6 @@
 package com.ylw.portal.pay.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.xxl.sso.core.conf.Conf;
 import com.xxl.sso.core.user.XxlSsoUser;
 import com.ylw.api.member.dto.output.UserOutDTO;
@@ -7,6 +8,7 @@ import com.ylw.api.pay.dto.dto.PayMentTransacDTO;
 import com.ylw.api.pay.dto.dto.PaymentChannelDTO;
 import com.ylw.common.web.core.base.BaseWebController;
 import com.ylw.common.web.core.entity.BaseResponse;
+import com.ylw.feign.PayContextFeign;
 import com.ylw.feign.PayMentTransacInfoFeign;
 import com.ylw.feign.PaymentChannelFeign;
 import com.ylw.member.feign.MemberServiceFeign;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
@@ -34,13 +37,16 @@ public class PayController extends BaseWebController {
     @Autowired
     private PaymentChannelFeign paymentChannelFeign;
 
-	@Autowired
-	private MemberServiceFeign memberServiceFeign;
+    @Autowired
+    private MemberServiceFeign memberServiceFeign;
 
-	/**
-	 * 跳转到index页面
-	 */
-	private static final String INDEX_FTL = "index";
+    @Autowired
+    private PayContextFeign payContextFeign;
+
+    /**
+     * 跳转到index页面
+     */
+    private static final String INDEX_FTL = "index";
 
     @RequestMapping("/pay")
     public String pay(HttpServletRequest request, String payToken, Model model) {
@@ -62,7 +68,8 @@ public class PayController extends BaseWebController {
         List<PaymentChannelDTO> paymentChanneList = paymentChannelFeign.selectAll();
         model.addAttribute("paymentChanneList", paymentChanneList);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        model.addAttribute("currentTime",sdf.format(new Date()));
+        model.addAttribute("currentTime", sdf.format(new Date()));
+        model.addAttribute("payToken", payToken);
 
         //5.设置当前用户
         XxlSsoUser xxlUser = (XxlSsoUser) request.getAttribute(Conf.SSO_USER);
@@ -82,6 +89,12 @@ public class PayController extends BaseWebController {
         }
 
         return INDEX_FTL;
+    }
+
+    @RequestMapping("/channel")
+    @ResponseBody
+    public BaseResponse<JSONObject> channel(String channelId, String payToken) {
+        return  payContextFeign.toPayHtml(channelId, payToken);
     }
 
 }
