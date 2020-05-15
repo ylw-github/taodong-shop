@@ -1,19 +1,15 @@
-package com.ylw.union;
+package com.ylw.service.pay.impl;
 
 import com.unionpay.acp.sdk.AcpService;
 import com.unionpay.acp.sdk.LogUtil;
 import com.unionpay.acp.sdk.SDKConstants;
-import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,7 +21,7 @@ import java.util.Map;
  * create time: 2020/5/15 11:04 上午
  */
 @Controller
-public class UnionResponseController {
+public class UnionResponseServiceImpl {
 
 
     @RequestMapping("/frontRcvResponse")
