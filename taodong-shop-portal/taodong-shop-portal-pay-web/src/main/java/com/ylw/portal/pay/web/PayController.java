@@ -93,8 +93,8 @@ public class PayController extends BaseWebController {
 
     @RequestMapping("/channel")
     @ResponseBody
-    public BaseResponse<JSONObject> channel(String channelId, String payToken) {
-        return  payContextFeign.toPayHtml(channelId, payToken);
+    public String channel(String channelId, String payToken) {
+        return payContextFeign.toPayHtml(channelId, payToken);
     }
 
 }

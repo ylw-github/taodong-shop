@@ -17,6 +17,7 @@
         <module>taodong-shop-service</module>
         <module>taodong-shop-portal</module>
         <module>taodong-shop-api-dto</module>
+        <module>taodong-shop-pay-plugin</module>
     </modules>
 
     <parent>
