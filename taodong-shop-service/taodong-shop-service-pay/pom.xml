@@ -28,5 +28,10 @@
             <artifactId>taodong-shop-union-plugin</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-alipay-plugin</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
     </dependencies>
 </project>

@@ -3,21 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ylw</groupId>
-        <artifactId>taodong-shop</artifactId>
+        <artifactId>taodong-shop-api-dto</artifactId>
         <version>1.0-RELEASE</version>
     </parent>
-    <artifactId>taodong-shop-pay-plugin</artifactId>
+    <artifactId>taodong-shop-alipay-plugin</artifactId>
 
-    <packaging>pom</packaging>
-    <modules>
-        <module>taodong-shop-union-plugin</module>
-        <module>taodong-shop-alipay-plugin</module>
-    </modules>
     <dependencies>
         <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>1.7.0.RELEASE</version>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>3.7.4.ALL</version>
         </dependency>
     </dependencies>
+
 </project>
