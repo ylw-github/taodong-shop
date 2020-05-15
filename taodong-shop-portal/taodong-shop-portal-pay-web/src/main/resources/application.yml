@@ -34,4 +34,4 @@ xxl:
     server: http://taodong.ssoserver.com:8099
 xxl-sso:
   excluded:
-    paths: ''
+    paths: '/test-xxl1,/test-xxl2'

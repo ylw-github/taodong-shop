@@ -97,4 +97,16 @@ public class PayController extends BaseWebController {
         return payContextFeign.toPayHtml(channelId, payToken);
     }
 
+    @RequestMapping("/test-xxl1")
+    @ResponseBody
+    public String test(String channelId, String payToken) {
+        return "test-xxl1";
+    }
+
+    @RequestMapping("/test-xxl2")
+    @ResponseBody
+    public String test1(String channelId, String payToken) {
+        return "test-xxl2";
+    }
+
 }
