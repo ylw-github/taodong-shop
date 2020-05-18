@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 public interface PayContextService {
     @GetMapping("/toPayHtml")
-    public String toPayHtml(@RequestParam("channelId") String channelId, @RequestParam("payToken") String payToken);
+    public BaseResponse<JSONObject> toPayHtml(@RequestParam("channelId") String channelId, @RequestParam("payToken") String payToken);
 
 }

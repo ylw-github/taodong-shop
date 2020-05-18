@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -93,8 +95,14 @@ public class PayController extends BaseWebController {
 
     @RequestMapping("/channel")
     @ResponseBody
-    public String channel(String channelId, String payToken) {
-        return payContextFeign.toPayHtml(channelId, payToken);
+    public void channel(String channelId, String payToken, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html; charset=utf-8");
+        BaseResponse<JSONObject> payHtmlData = payContextFeign.toPayHtml(channelId, payToken);
+        if (isSuccess(payHtmlData)) {
+            JSONObject data = payHtmlData.getData();
+            String payHtml = data.getString("payHtml");
+            response.getWriter().print(payHtml);
+        }
     }
 
     @RequestMapping("/test-xxl1")
