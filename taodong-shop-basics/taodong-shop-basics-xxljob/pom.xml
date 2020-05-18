@@ -1,10 +1,142 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.ylw</groupId>
-		<artifactId>taodong-shop-basics</artifactId>
-		<version>1.0-RELEASE</version>
-	</parent>
-	<artifactId>taodong-shop-basics-xxljob</artifactId>
+	<groupId>com.xuxueli</groupId>
+	<artifactId>xxl-job</artifactId>
+
+
+	<version>2.0.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>${project.artifactId}</name>
+	<description>A lightweight distributed task scheduling framework.</description>
+	<url>http://www.xuxueli.com/</url>
+
+	<modules>
+		<module>xxl-job-core</module>
+		<module>xxl-job-admin</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.test.skip>true</maven.test.skip>
+
+		<xxl-rpc.version>1.3.2</xxl-rpc.version>
+
+		<spring-boot.version>1.5.19.RELEASE</spring-boot.version>
+		<mybatis-spring-boot-starter.version>1.3.3</mybatis-spring-boot-starter.version>
+		<mysql-connector-java.version>5.1.47</mysql-connector-java.version>
+
+		<spring.version>4.3.22.RELEASE</spring.version>
+		<freemarker.version>2.3.28</freemarker.version>
+
+		<slf4j-api.version>1.7.25</slf4j-api.version>
+		<junit.version>4.12</junit.version>
+
+		<commons-exec.version>1.3</commons-exec.version>
+		<commons-lang3.version>3.8.1</commons-lang3.version>
+
+		<groovy.version>2.5.6</groovy.version>
+		<quartz.version>2.3.0</quartz.version>
+
+	</properties>
+
+	<build>
+		<plugins>
+		</plugins>
+	</build>
+
+
+	<licenses>
+		<license>
+			<name>GNU General Public License version 3</name>
+			<url>https://opensource.org/licenses/GPL-3.0</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<tag>master</tag>
+		<url>https://github.com/xuxueli/xxl-job.git</url>
+		<connection>scm:git:https://github.com/xuxueli/xxl-job.git</connection>
+		<developerConnection>scm:git:git@github.com:xuxueli/xxl-job.git</developerConnection>
+	</scm>
+	<developers>
+		<developer>
+			<id>XXL</id>
+			<name>xuxueli</name>
+			<email>931591021@qq.com</email>
+			<url>https://github.com/xuxueli</url>
+		</developer>
+	</developers>
+
+	<profiles>
+
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<!-- Source -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>3.0.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- Javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- GPG -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<configuration>
+							<useAgent>false</useAgent>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
 </project>

@@ -1,0 +1,23 @@
+server:
+  port: 8081
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka
+logging:
+  config: classpath:logback.xml
+xxl:
+  job:
+    executor:
+      logpath: ./jobhandler
+      appname: taodong-shop-pay-job
+      port: 9999
+      logretentiondays: -1
+      ip:
+    admin:
+      addresses: http://127.0.0.1:9998
+    accessToken:
+spring:
+  application:
+    name: taodong-shop-pay-job
