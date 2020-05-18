@@ -34,3 +34,12 @@ logging:
   level:
     com.ylw.service.pay.mapper: debug
 
+###多线程配置
+threadPool:
+  ###核心线程数
+  corePoolSize: 10
+  ###最大线程数
+  maxPoolSize: 20
+  ##  队列容量
+  queueCapacity: 16
+
