@@ -1,5 +1,6 @@
 package com.ylw.service.pay.callback.template;
 
+import com.alipay.api.AlipayApiException;
 import com.ylw.service.pay.constant.PayConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -23,7 +24,7 @@ public abstract class AbstractPayCallbackTemplate {
      * @param resp
      * @return
      */
-    public abstract Map<String, String> verifySignature(HttpServletRequest req, HttpServletResponse resp);
+    public abstract Map<String, String> verifySignature(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException, AlipayApiException;
 
     /**
      * description: 同步回调执行业务逻辑
@@ -31,7 +32,7 @@ public abstract class AbstractPayCallbackTemplate {
      *
      * @return
      */
-    public abstract String syncService(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException;
+    public abstract String syncService(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException, AlipayApiException;
 
 
     /**
@@ -51,7 +52,7 @@ public abstract class AbstractPayCallbackTemplate {
      * 2. 将日志根据支付id存放到数据库中<br>
      * 3. 执行的异步回调业务逻辑<br>
      */
-    public String asyncCallBack(HttpServletRequest req, HttpServletResponse resp) {
+    public String asyncCallBack(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException, AlipayApiException {
         // 1. 验证报文参数 相同点 获取所有的请求参数封装成为map集合 并且进行参数验证
         Map<String, String> verifySignature = verifySignature(req, resp);
         // 2.将日志根据支付id存放到数据库中

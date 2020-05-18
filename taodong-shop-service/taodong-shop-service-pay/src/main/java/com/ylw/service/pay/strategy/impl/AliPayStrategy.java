@@ -30,8 +30,8 @@ public class AliPayStrategy implements PayStrategy {
 
 		// 设置请求参数
 		AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();
-		alipayRequest.setReturnUrl(AlipayConfig.return_url);
-		alipayRequest.setNotifyUrl(AlipayConfig.notify_url);
+		alipayRequest.setReturnUrl(pymentChannel.getSyncUrl());
+		alipayRequest.setNotifyUrl(pymentChannel.getAsynUrl());
 
 		// 商户订单号，商户网站订单系统中唯一订单号，必填
 		String outTradeNo = payMentTransacDTO.getPaymentId();
