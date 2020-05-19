@@ -18,4 +18,5 @@ public interface PaymentTransactionMapper {
 	public int updatePaymentStatus(@Param("paymentStatus") String paymentStatus, @Param("paymentId") String paymentId);
 
 
+
 }

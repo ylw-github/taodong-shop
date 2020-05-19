@@ -1,0 +1,179 @@
+2020-05-18 17:01:39,572 INFO [main] o.s.c.a.AnnotationConfigApplicationContext [AbstractApplicationContext.java : 590] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5023bb8b: startup date [Mon May 18 17:01:39 CST 2020]; root of context hierarchy
+2020-05-18 17:01:40,837 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 154] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-05-18 17:01:40,912 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 328] Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ef1459cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 17:01:41,505 INFO [main] com.ylw.pay.job.AppPayJob [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2020-05-18 17:01:41,536 INFO [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java : 590] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d4a65c6: startup date [Mon May 18 17:01:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5023bb8b
+2020-05-18 17:01:42,878 INFO [main] o.s.cloud.context.scope.GenericScope [GenericScope.java : 288] BeanFactory id=9b2a08fb-d001-365e-b12e-0d3938e8e14c
+2020-05-18 17:01:42,923 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 154] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-05-18 17:01:43,392 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 328] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ef1459cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 17:01:44,000 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 91] Tomcat initialized with port(s): 8081 (http)
+2020-05-18 17:01:44,040 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 180] Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 17:01:44,117 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 180] Starting service [Tomcat]
+2020-05-18 17:01:44,120 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 180] Starting Servlet Engine: Apache Tomcat/8.5.29
+2020-05-18 17:01:44,133 INFO [localhost-startStop-1] o.a.c.core.AprLifecycleListener [DirectJDKLog.java : 180] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yanglinwei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-05-18 17:01:44,477 INFO [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 180] Initializing Spring embedded WebApplicationContext
+2020-05-18 17:01:44,481 INFO [localhost-startStop-1] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 285] Root WebApplicationContext: initialization completed in 2945 ms
+2020-05-18 17:01:44,728 INFO [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java : 185] Servlet dispatcherServlet mapped to [/]
+2020-05-18 17:01:44,735 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 244] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-18 17:01:44,736 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 244] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-18 17:01:44,736 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 244] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-18 17:01:44,736 INFO [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java : 244] Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-18 17:01:44,809 INFO [main] com.ylw.pay.job.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2020-05-18 17:01:44,824 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 228] >>>>>>>>>>> xxl-job register jobhandler success, name:payJobHandler, jobHandler:com.ylw.pay.job.handler.PayJobHandler@3ebe4ccc
+2020-05-18 17:01:44,858 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2020-05-18 17:01:44,912 WARN [main] c.n.c.sources.URLConfigurationSource [URLConfigurationSource.java : 121] No URLs will be polled as dynamic configuration sources.
+2020-05-18 17:01:44,913 INFO [main] c.n.c.sources.URLConfigurationSource [URLConfigurationSource.java : 122] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-18 17:01:44,922 WARN [main] c.n.c.sources.URLConfigurationSource [URLConfigurationSource.java : 121] No URLs will be polled as dynamic configuration sources.
+2020-05-18 17:01:44,922 INFO [main] c.n.c.sources.URLConfigurationSource [URLConfigurationSource.java : 122] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-18 17:01:45,239 INFO [Thread-23] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2020-05-18 17:01:45,293 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 373] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-18 17:01:45,769 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 574] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d4a65c6: startup date [Mon May 18 17:01:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5023bb8b
+2020-05-18 17:01:45,854 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 547] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-18 17:01:45,856 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 547] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-18 17:01:45,894 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 373] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-18 17:01:45,894 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java : 373] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-18 17:01:46,996 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 433] Registering beans for JMX exposure on startup
+2020-05-18 17:01:47,036 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 895] Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-05-18 17:01:47,037 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 895] Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-05-18 17:01:47,040 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 895] Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-05-18 17:01:47,045 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 675] Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-05-18 17:01:47,071 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 675] Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-05-18 17:01:47,102 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 675] Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6d4a65c6,type=ConfigurationPropertiesRebinder]
+2020-05-18 17:01:47,121 INFO [main] o.s.c.s.DefaultLifecycleProcessor [DefaultLifecycleProcessor.java : 351] Starting beans in phase 0
+2020-05-18 17:01:47,135 INFO [main] o.s.c.n.eureka.InstanceInfoFactory [InstanceInfoFactory.java : 71] Setting initial instance status as: STARTING
+2020-05-18 17:01:47,189 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 349] Initializing Eureka in region us-east-1
+2020-05-18 17:01:47,598 INFO [main] c.n.d.p.DiscoveryJerseyProvider [DiscoveryJerseyProvider.java : 70] Using JSON encoding codec LegacyJacksonJson
+2020-05-18 17:01:47,599 INFO [main] c.n.d.p.DiscoveryJerseyProvider [DiscoveryJerseyProvider.java : 71] Using JSON decoding codec LegacyJacksonJson
+2020-05-18 17:01:47,744 INFO [main] c.n.d.p.DiscoveryJerseyProvider [DiscoveryJerseyProvider.java : 80] Using XML encoding codec XStreamXml
+2020-05-18 17:01:47,745 INFO [main] c.n.d.p.DiscoveryJerseyProvider [DiscoveryJerseyProvider.java : 81] Using XML decoding codec XStreamXml
+2020-05-18 17:01:48,267 INFO [main] c.n.d.s.r.aws.ConfigClusterResolver [ConfigClusterResolver.java : 43] Resolving eureka endpoints via configuration
+2020-05-18 17:01:48,298 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 958] Disable delta property : false
+2020-05-18 17:01:48,299 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 959] Single vip registry refresh property : null
+2020-05-18 17:01:48,299 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 960] Force full registry fetch : false
+2020-05-18 17:01:48,299 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 961] Application is null : false
+2020-05-18 17:01:48,299 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 962] Registered Applications size is zero : true
+2020-05-18 17:01:48,300 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 964] Application version is -1: true
+2020-05-18 17:01:48,300 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1047] Getting all instance registry info from the eureka server
+2020-05-18 17:01:48,586 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1056] The response status is 200
+2020-05-18 17:01:48,591 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1264] Starting heartbeat executor: renew interval is: 30
+2020-05-18 17:01:48,595 INFO [main] c.n.discovery.InstanceInfoReplicator [InstanceInfoReplicator.java : 59] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-18 17:01:48,602 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 449] Discovery Client initialized at timestamp 1589792508600 with initial instances count: 0
+2020-05-18 17:01:48,608 INFO [main] o.s.c.n.e.s.EurekaServiceRegistry [EurekaServiceRegistry.java : 42] Registering application taodong-shop-pay-job with eureka with status UP
+2020-05-18 17:01:48,610 INFO [main] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1299] Saw local status change event StatusChangeEvent [timestamp=1589792508609, current=UP, previous=STARTING]
+2020-05-18 17:01:48,613 INFO [DiscoveryClient-InstanceInfoReplicator-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 826] DiscoveryClient_TAODONG-SHOP-PAY-JOB/192.168.18.188:taodong-shop-pay-job:8081: registering service...
+2020-05-18 17:01:48,638 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 180] Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 17:01:48,639 INFO [main] o.a.tomcat.util.net.NioSelectorPool [DirectJDKLog.java : 180] Using a shared selector for servlet write/read
+2020-05-18 17:01:48,681 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 206] Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 17:01:48,683 INFO [main] o.s.c.n.e.s.EurekaAutoServiceRegistration [EurekaAutoServiceRegistration.java : 124] Updating port to 8081
+2020-05-18 17:01:48,690 INFO [main] com.ylw.pay.job.AppPayJob [StartupInfoLogger.java : 59] Started AppPayJob in 11.543 seconds (JVM running for 14.292)
+2020-05-18 17:01:48,727 INFO [DiscoveryClient-InstanceInfoReplicator-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 835] DiscoveryClient_TAODONG-SHOP-PAY-JOB/192.168.18.188:taodong-shop-pay-job:8081 - registration status: 204
+2020-05-18 17:01:51,165 INFO [xxl-rpc, NettyHttpServer-serverHandlerPool-1545148722] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 241] >>>>>>>>>>> xxl-job regist JobThread success, jobId:2, handler:com.ylw.pay.job.handler.PayJobHandler@3ebe4ccc
+2020-05-18 17:01:51,178 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:52,078 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:53,054 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:54,060 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:55,089 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:56,060 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:57,052 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:58,057 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:01:59,092 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:00,078 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:01,070 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:02,071 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:03,079 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:04,236 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:05,185 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:06,108 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:07,089 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:08,073 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:09,110 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:10,155 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:11,075 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:12,131 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:13,071 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:14,087 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:15,131 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:16,159 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:17,104 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:18,070 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:18,615 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 958] Disable delta property : false
+2020-05-18 17:02:18,617 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 959] Single vip registry refresh property : null
+2020-05-18 17:02:18,618 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 960] Force full registry fetch : false
+2020-05-18 17:02:18,619 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 961] Application is null : false
+2020-05-18 17:02:18,619 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 962] Registered Applications size is zero : true
+2020-05-18 17:02:18,620 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 964] Application version is -1: false
+2020-05-18 17:02:18,620 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1047] Getting all instance registry info from the eureka server
+2020-05-18 17:02:19,087 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:19,192 INFO [DiscoveryClient-CacheRefreshExecutor-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1056] The response status is 200
+2020-05-18 17:02:20,109 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:21,122 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:22,115 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:23,066 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:24,105 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:25,089 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:26,068 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:27,066 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:28,055 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:29,094 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:30,097 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:31,075 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:32,094 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:33,087 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:34,076 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:35,060 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:36,110 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:37,079 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:38,081 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:39,087 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:40,135 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:41,068 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:42,120 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:43,071 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:44,051 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:45,073 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:46,126 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:47,127 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:48,149 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:49,122 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:50,056 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:51,072 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:52,072 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:53,065 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:54,085 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:55,053 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:56,062 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:57,085 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:58,065 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:02:59,058 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:00,093 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:01,090 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:02,090 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:03,078 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:04,135 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:05,088 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:06,107 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:07,072 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:08,089 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:09,066 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:10,092 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:11,091 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:03:12,077 INFO [Thread-40] c.ylw.pay.job.handler.PayJobHandler [PayJobHandler.java : 21] >>>使用任务调度实现自动化对账
+2020-05-18 17:04:08,045 INFO [Thread-35] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java : 993] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d4a65c6: startup date [Mon May 18 17:01:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5023bb8b
+2020-05-18 17:04:08,053 INFO [Thread-35] o.s.c.n.e.s.EurekaServiceRegistry [EurekaServiceRegistry.java : 65] Unregistering application taodong-shop-pay-job with eureka with status DOWN
+2020-05-18 17:04:08,054 WARN [Thread-35] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 1297] Saw local status change event StatusChangeEvent [timestamp=1589792648054, current=DOWN, previous=UP]
+2020-05-18 17:04:08,059 INFO [DiscoveryClient-InstanceInfoReplicator-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 826] DiscoveryClient_TAODONG-SHOP-PAY-JOB/192.168.18.188:taodong-shop-pay-job:8081: registering service...
+2020-05-18 17:04:08,081 INFO [Thread-35] o.s.c.s.DefaultLifecycleProcessor [DefaultLifecycleProcessor.java : 366] Stopping beans in phase 0
+2020-05-18 17:04:08,086 INFO [Thread-35] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 888] Shutting down DiscoveryClient ...
+2020-05-18 17:04:08,092 INFO [Thread-35] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 922] Unregistering ...
+2020-05-18 17:04:08,110 INFO [DiscoveryClient-InstanceInfoReplicator-0] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 835] DiscoveryClient_TAODONG-SHOP-PAY-JOB/192.168.18.188:taodong-shop-pay-job:8081 - registration status: 204
+2020-05-18 17:04:08,123 INFO [Thread-35] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 924] DiscoveryClient_TAODONG-SHOP-PAY-JOB/192.168.18.188:taodong-shop-pay-job:8081 - deregister  status: 200
+2020-05-18 17:04:08,171 INFO [Thread-35] c.netflix.discovery.DiscoveryClient [DiscoveryClient.java : 911] Completed shut down of DiscoveryClient
+2020-05-18 17:04:08,173 INFO [Thread-35] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java : 451] Unregistering JMX-exposed beans on shutdown
+2020-05-18 17:04:08,178 INFO [Thread-35] o.s.j.e.a.AnnotationMBeanExporter [MBeanRegistrationSupport.java : 183] Unregistering JMX-exposed beans
+2020-05-18 17:04:08,321 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 96] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2020-05-18 17:04:08,322 INFO [Thread-22] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 126] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2020-05-18 17:04:08,323 INFO [Thread-40] com.xxl.job.core.thread.JobThread [JobThread.java : 214] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-40,10,main]
+2020-05-18 17:04:08,324 INFO [Thread-23] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 70] >>>>>>>>>>> xxl-rpc remoting server stop.
+2020-05-18 17:04:08,351 INFO [xxl-job, executor ExecutorRegistryThread] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:http://127.0.0.1:9998/api, XxlRpcRequestXxlRpcRequest{requestId='b3989eae-d7bc-409e-a496-b87211c7a604', createMillisTime=1589792648324, accessToken='', className='com.xxl.job.core.biz.AdminBiz', methodName='registryRemove', parameterTypes=[class com.xxl.job.core.biz.model.RegistryParam], parameters=[RegistryParam{registGroup='EXECUTOR', registryKey='taodong-shop-pay-job', registryValue='169.254.152.216:9999'}], version='null'}
+2020-05-18 17:04:08,354 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2020-05-18 17:04:08,355 INFO [Thread-35] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 106] >>>>>>>>>>> xxl-rpc remoting server destroy success.
