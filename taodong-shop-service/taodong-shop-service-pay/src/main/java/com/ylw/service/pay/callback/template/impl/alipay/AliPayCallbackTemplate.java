@@ -149,7 +149,7 @@ public class AliPayCallbackTemplate extends AbstractPayCallbackTemplate {
                 return successResult();
             }
             // 2.将状态改为已经支付成功
-            paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", paymentId);
+            paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", paymentId,"ali_pay");
             // 3.调用积分服务接口增加积分(处理幂等性问题)
             return successResult();
         }

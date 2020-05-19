@@ -44,4 +44,9 @@ public class PaymentTransactionEntity {
 	 */
 	private String productName;
 
+	/**
+	 * 商品渠道
+	 */
+	private String paymentChannel;
+
 }

@@ -19,6 +19,7 @@
 		<module>taodong-shop-service-api-spike</module>
 		<module>taodong-shop-service-api-sso</module>
 		<module>taodong-shop-service-api-weixin</module>
+		<module>taodong-shop-service-api-integral</module>
 	</modules>
 
 	<dependencies>

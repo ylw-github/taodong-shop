@@ -83,7 +83,7 @@ public class UnionPayCompensationStrategy extends BaseApiService<JSONObject> imp
                     if ("00".equals(origRespCode)) {
                         // 交易成功，更新商户订单状态
                         // 2.将状态改为已经支付成功
-                        paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", orderId);
+                        paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", orderId,"yinlian_pay");
                         // 3.调用积分服务接口增加积分(处理幂等性问题)
                         return true;
                     } else if ("03".equals(origRespCode) || "04".equals(origRespCode) || "05".equals(origRespCode)) {

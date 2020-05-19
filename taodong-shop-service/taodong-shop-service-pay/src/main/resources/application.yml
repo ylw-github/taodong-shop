@@ -25,6 +25,20 @@ spring:
         max-wait: -1
         min-idle: 1
     port: 6379
+  rabbitmq:
+    ####连接地址
+    host: 127.0.0.1
+    ####端口号
+    port: 5672
+    ####账号
+    username: guest
+    ####密码
+    password: guest
+    ### 地址
+    virtual-host: integral_host
+    ###开启消息确认机制 confirms
+    publisher-confirms: true
+    publisher-returns: true
 
 ### mybatis 日志打印
 mybatis:
@@ -42,4 +56,5 @@ threadPool:
   maxPoolSize: 20
   ##  队列容量
   queueCapacity: 16
+
 

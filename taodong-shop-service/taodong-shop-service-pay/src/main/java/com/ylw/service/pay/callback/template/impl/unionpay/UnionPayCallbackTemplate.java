@@ -1,5 +1,6 @@
 package com.ylw.service.pay.callback.template.impl.unionpay;
 
+import com.alibaba.fastjson.JSONObject;
 import com.unionpay.acp.sdk.AcpService;
 import com.unionpay.acp.sdk.LogUtil;
 import com.unionpay.acp.sdk.SDKConstants;
@@ -8,8 +9,10 @@ import com.ylw.service.pay.callback.template.AbstractPayCallbackTemplate;
 import com.ylw.service.pay.constant.PayConstant;
 import com.ylw.service.pay.mapper.PaymentTransactionMapper;
 import com.ylw.service.pay.mapper.entity.PaymentTransactionEntity;
+import com.ylw.service.pay.mq.producer.IntegralProducer;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +32,9 @@ import java.util.Map;
  */
 @Component
 public class UnionPayCallbackTemplate extends AbstractPayCallbackTemplate {
+
+	@Autowired
+	private IntegralProducer integralProducer;
 
 	@Autowired
 	private PaymentTransactionMapper paymentTransactionMapper;
@@ -122,9 +128,23 @@ public class UnionPayCallbackTemplate extends AbstractPayCallbackTemplate {
 			return successResult();
 		}
 		// 2.将状态改为已经支付成功
-		paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", orderId);
-		// 3.调用积分服务接口增加积分(处理幂等性问题)
+		paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", orderId+"","yinlian_pay");
+		// 3.调用积分服务接口增加积分(处理幂等性问题) MQ
+		addMQIntegral(paymentTransaction); // 使用MQ
+		int i = 1 / 0; // 支付状态还是为待支付状态但是 积分缺增加
 		return successResult();
+	}
+
+	/**
+	 * 基于MQ增加积分
+	 */
+	@Async
+	public void addMQIntegral(PaymentTransactionEntity paymentTransaction) {
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("paymentId", paymentTransaction.getPaymentId());
+		jsonObject.put("userId", paymentTransaction.getUserId());
+		jsonObject.put("integral", 100);
+		integralProducer.send(jsonObject);
 	}
 
 	@Override

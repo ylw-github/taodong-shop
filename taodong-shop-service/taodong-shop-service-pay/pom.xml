@@ -33,5 +33,10 @@
             <artifactId>taodong-shop-alipay-plugin</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+        <!-- 添加springboot对amqp的支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
     </dependencies>
 </project>

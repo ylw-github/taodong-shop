@@ -1,0 +1,61 @@
+
+###服务启动端口号
+server:
+  port: 8800
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+
+spring:
+  application:
+    name:  taodong-shop-service-integral
+###数据库相关连接      
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taodong-integral?useUnicode=true&characterEncoding=UTF-8
+  rabbitmq:
+  ####连接地址
+    host: 127.0.0.1
+   ####端口号   
+    port: 5672
+   ####账号 
+    username: guest
+   ####密码  
+    password: guest
+   ### 地址
+    virtual-host: integral_host
+    listener:
+      simple:
+        retry:
+        ####开启消费者（程序出现异常的情况下会）进行重试
+          enabled: true
+         ####最大重试次数
+          max-attempts: 5
+        ####重试间隔时间
+          initial-interval: 1000
+        ####开启手动ack  
+        acknowledge-mode: manual 
+        default-requeue-rejected: false
+
+### mybatis 日志打印
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.ylw.service.pay.mapper: debug
+   
+###多线程配置
+threadPool:  
+###核心线程数
+   corePoolSize: 10
+ ###最大线程数  
+   maxPoolSize: 20
+ ##  队列容量
+   queueCapacity: 16   
+
+   

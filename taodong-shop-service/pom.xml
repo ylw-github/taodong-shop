@@ -20,6 +20,7 @@
 		<module>taodong-shop-service-spike</module>
 		<module>taodong-shop-service-sso</module>
 		<module>taodong-shop-service-weixin</module>
+		<module>taodong-shop-service-integral</module>
 	</modules>
 
 	<dependencies>
