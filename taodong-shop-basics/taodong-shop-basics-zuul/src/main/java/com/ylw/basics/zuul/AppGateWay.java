@@ -8,6 +8,7 @@ import com.ctrip.framework.apollo.model.ConfigChangeEvent;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import com.spring4all.swagger.EnableSwagger2Doc;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -20,11 +21,12 @@ import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+//@EnableApolloConfig
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZuulProxy
 @EnableSwagger2Doc
-@EnableApolloConfig
+@MapperScan(basePackages = "com.ylw.basics.zuul.mapper")
 public class AppGateWay {
 
     // 获取ApolloConfig

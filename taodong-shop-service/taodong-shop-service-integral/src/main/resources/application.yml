@@ -16,7 +16,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/taodong-integral?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/taodong-integral?useUnicode=true&characterEncoding=utf8&useSSL=false
   rabbitmq:
   ####连接地址
     host: 127.0.0.1

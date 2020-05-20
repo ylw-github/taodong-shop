@@ -1,0 +1,47 @@
+###服务启动端口号
+server:
+  port: 80
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name:  taodong-shop-basics-zuul
+  ###数据库相关连接
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taodong-gateway?useUnicode=true&characterEncoding=utf8&useSSL=false
+### 配置网关反向代理
+zuul:
+  routes:
+    api-a:
+      ### 以 /api-weixin/访问转发到会员服务
+      path: /api-weixin/**
+      serviceId: taodong-shop-service-weixin
+    api-b:
+      ### 以 /api-member/访问转发到订单服务
+      path: /api-member/**
+      serviceId: taodong-shop-service-member
+    api-c:
+      ### 以 /api-member/访问转发到订单服务
+      path: /api-pay/**
+      serviceId: taodong-shop-service-pay
+
+taodong-shop:
+  zuul:
+    swagger:
+      document: '[ { "name": "taodong-shop-service-member", "location": "/taodong-shop-service-member/v2/api-docs",
+                "version": "2.0" }, { "name": "taodong-shop-service-weixin", "location":
+                "/taodong-shop-service-weixin/v2/api-docs", "version": "2.0" } ]'
+### mybatis 日志打印
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.ylw.basics.zuul.mapper: debug
