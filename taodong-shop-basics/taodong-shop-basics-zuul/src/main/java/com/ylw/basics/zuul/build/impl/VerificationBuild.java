@@ -1,12 +1,17 @@
 package com.ylw.basics.zuul.build.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.netflix.zuul.context.RequestContext;
 import com.ylw.basics.zuul.build.GatewayBuild;
+import com.ylw.basics.zuul.feign.AuthorizationServiceFeign;
 import com.ylw.basics.zuul.mapper.BlacklistMapper;
 import com.ylw.basics.zuul.mapper.entity.Blacklist;
+import com.ylw.common.web.core.constants.Constants;
+import com.ylw.common.web.core.entity.BaseResponse;
 import com.ylw.common.web.core.sign.SignUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,8 +27,12 @@ import java.util.*;
 @Slf4j
 @Component
 public class VerificationBuild implements GatewayBuild {
+
     @Autowired
     private BlacklistMapper blacklistMapper;
+
+    @Autowired
+    private AuthorizationServiceFeign verificaCodeServiceFeign;
 
     @Override
     public Boolean blackBlock(RequestContext ctx, String ipAddres, HttpServletResponse response) {
@@ -70,10 +79,44 @@ public class VerificationBuild implements GatewayBuild {
         return requestQueryParams;
     }
 
+    @Override
+    public Boolean apiAuthority(RequestContext ctx, HttpServletRequest request) {
+        String servletPath = request.getServletPath();
+        log.info(">>>>>servletPath:" + servletPath + ",servletPath.substring(0, 5):" + servletPath.substring(0, 5));
+        if (!servletPath.substring(0, 7).equals("/public")) {
+            return true;
+        }
+        String accessToken = request.getParameter("accessToken");
+        log.info(">>>>>accessToken验证:" + accessToken);
+        if (StringUtils.isEmpty(accessToken)) {
+            resultError(ctx, "AccessToken cannot be empty");
+            return false;
+        }
+        // 调用接口验证accessToken是否失效
+        BaseResponse<JSONObject> appInfo = verificaCodeServiceFeign.getAppInfo(accessToken);
+        log.info(">>>>>>data:" + appInfo.toString());
+        if (!isSuccess(appInfo)) {
+            resultError(ctx, appInfo.getMsg());
+            return false;
+        }
+        return true;
+    }
+
     private void resultError(RequestContext ctx, String errorMsg) {
         ctx.setResponseStatusCode(401);
         ctx.setSendZuulResponse(false);
         ctx.setResponseBody(errorMsg);
 
+    }
+
+    // 接口直接返回true 或者false
+    public Boolean isSuccess(BaseResponse<?> baseResp) {
+        if (baseResp == null) {
+            return false;
+        }
+        if (!baseResp.getCode().equals(Constants.HTTP_RES_CODE_200)) {
+            return false;
+        }
+        return true;
     }
 }

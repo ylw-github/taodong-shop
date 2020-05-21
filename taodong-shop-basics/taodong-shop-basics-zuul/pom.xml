@@ -24,5 +24,16 @@
             <artifactId>taodong-shop-common-core</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ylw</groupId>
+            <artifactId>taodong-shop-service-api-auth</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
     </dependencies>
 </project>

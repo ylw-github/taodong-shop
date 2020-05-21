@@ -31,6 +31,10 @@ zuul:
       ### 以 /api-member/访问转发到订单服务
       path: /api-pay/**
       serviceId: taodong-shop-service-pay
+    api-d:
+      ### 以 /api-pay/访问转发到订单服务
+      path: /public/api-pay/**
+      serviceId: taodong-shop-service-pay
 
 taodong-shop:
   zuul:

@@ -37,6 +37,12 @@ public class GatewayDirector {
         if (filterParameters != null && filterParameters.size() > 0) {
             ctx.setRequestQueryParams(filterParameters);
         }
+
+        // 3.验证accessToken
+        Boolean apiAuthority = gatewayBuild.apiAuthority(ctx, request);
+        if (!apiAuthority) {
+            return;
+        }
     }
 
 }

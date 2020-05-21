@@ -28,4 +28,10 @@ public interface GatewayBuild {
 	 * 参数过滤转义（防御XSS攻击）
 	 */
 	Map<String, List<String>> filterParameters(HttpServletRequest request, RequestContext ctx);
+
+	/**
+	 * api权限控制
+	 *
+	 */
+	Boolean apiAuthority(RequestContext ctx, HttpServletRequest request);
 }
