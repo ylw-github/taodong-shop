@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import springfox.documentation.swagger.web.SwaggerResource;
@@ -29,6 +30,7 @@ import java.util.List;
 @EnableSwagger2Doc
 @EnableFeignClients
 @MapperScan(basePackages = "com.ylw.basics.zuul.mapper")
+@ComponentScan(basePackages = "com.ylw")
 public class AppGateWay {
 
     // 获取ApolloConfig

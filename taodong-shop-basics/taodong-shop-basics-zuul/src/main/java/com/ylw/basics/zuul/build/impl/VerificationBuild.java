@@ -37,8 +37,8 @@ public class VerificationBuild implements GatewayBuild {
     @Override
     public Boolean blackBlock(RequestContext ctx, String ipAddres, HttpServletResponse response) {
         // 2.查询数据库黑名单
-        Blacklist meiteBlacklist = blacklistMapper.findBlacklist(ipAddres);
-        if (meiteBlacklist != null) {
+        Blacklist blacklist = blacklistMapper.findBlacklist(ipAddres);
+        if (blacklist != null) {
             resultError(ctx, "ip:" + ipAddres + ",Insufficient access rights");
             return false;
         }
