@@ -24,11 +24,11 @@ public class GatewayDirector {
         }
         /**
          * 参数验证
-         *//*
+         */
         Boolean verifyMap = gatewayBuild.toVerifyMap(ctx, ipAddres, request);
         if (!verifyMap) {
             return;
-        }*/
+        }
 
         /**
          * XSS攻击处理

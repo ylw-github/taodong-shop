@@ -21,6 +21,7 @@
 		<module>taodong-shop-service-sso</module>
 		<module>taodong-shop-service-weixin</module>
 		<module>taodong-shop-service-integral</module>
+		<module>taodong-shop-service-auth</module>
 	</modules>
 
 	<dependencies>

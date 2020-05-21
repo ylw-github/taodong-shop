@@ -1,0 +1,43 @@
+
+###服务启动端口号
+server:
+  port: 9500
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka
+spring:
+  application:
+    name:  taodong-shop-service-auth
+  redis:
+    host: 127.0.0.1
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 100
+        max-wait: -1
+        min-idle: 1
+    port: 6379
+###数据库相关连接      
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/taodong-gateway?characterEncoding=utf8&useSSL=false
+
+####打印MyBatias日志
+logging:
+  level:
+    com.ylw.service.auth.mapper: debug
+
+###多线程配置
+threadPool:  
+###核心线程数
+   corePoolSize: 10
+ ###最大线程数  
+   maxPoolSize: 20
+ ##  队列容量
+   queueCapacity: 16   
+
+   

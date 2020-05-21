@@ -24,5 +24,8 @@ public interface GatewayBuild {
 	 */
 	Boolean toVerifyMap(RequestContext ctx, String ipAddres, HttpServletRequest request);
 
+	/**
+	 * 参数过滤转义（防御XSS攻击）
+	 */
 	Map<String, List<String>> filterParameters(HttpServletRequest request, RequestContext ctx);
 }
