@@ -4,6 +4,8 @@ import com.netflix.zuul.context.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Map;
 
 /**
  * description: 网关行为建造者
@@ -22,4 +24,5 @@ public interface GatewayBuild {
 	 */
 	Boolean toVerifyMap(RequestContext ctx, String ipAddres, HttpServletRequest request);
 
+	Map<String, List<String>> filterParameters(HttpServletRequest request, RequestContext ctx);
 }
