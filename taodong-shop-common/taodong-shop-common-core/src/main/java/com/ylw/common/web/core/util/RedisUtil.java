@@ -17,6 +17,19 @@ public class RedisUtil {
 	private StringRedisTemplate stringRedisTemplate;
 
 	/**
+	 * description: 如果key存在的话返回fasle 不存在的话返回true
+	 * param:
+	 * @return
+	 */
+	public Boolean setNx(String key, String value, Long timeout) {
+		Boolean setIfAbsent = stringRedisTemplate.opsForValue().setIfAbsent(key, value);
+		if (timeout != null) {
+			stringRedisTemplate.expire(key, timeout, TimeUnit.SECONDS);
+		}
+		return setIfAbsent;
+	}
+
+	/**
 	 * 存放string类型
 	 *
 	 * @param key
