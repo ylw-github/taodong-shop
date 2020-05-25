@@ -41,6 +41,17 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 		}
 		// 2.用户频率限制 setnx 如果key存在话
 
+		Boolean reusltNx = redisUtil.setNx(phone, seckillId + "", 10l);
+		if (!reusltNx) {
+			return setResultError("访问次数过多，10秒后在实现重试!");
+		}
+		// 3.（悲观锁 ）修改数据库对应的库存 1万中只有100个抢购成功 提前生成好100个token 谁能够抢购成功token放入到mq中实现异步修改库存
+		/*int inventoryDeduction = seckillMapper.pessimisticDeduction(seckillId);
+		if (!toDaoResult(inventoryDeduction)) {
+			log.info(">>>修改库存失败>>>>inventoryDeduction返回为{} 秒杀失败！", inventoryDeduction);
+			return setResultError("亲，请稍后重试!");
+		}*/
+
 		// 3.（乐观锁 ）修改数据库对应的库存 1万中只有100个抢购成功 提前生成好100个token 谁能够抢购成功token放入到mq中实现异步修改库存
 		Long version = seckillEntity.getVersion();
 		int inventoryDeduction = seckillMapper.optimisticDeduction(seckillId, version);
