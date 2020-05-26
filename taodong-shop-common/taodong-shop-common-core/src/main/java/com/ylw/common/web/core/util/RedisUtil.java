@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -18,8 +19,8 @@ public class RedisUtil {
 
 	/**
 	 * description: 如果key存在的话返回fasle 不存在的话返回true
-	 * param:
-	 * @return
+	 * create by: YangLinWei
+	 * create time: 2020/5/25 5:45 下午
 	 */
 	public Boolean setNx(String key, String value, Long timeout) {
 		Boolean setIfAbsent = stringRedisTemplate.opsForValue().setIfAbsent(key, value);
@@ -112,5 +113,12 @@ public class RedisUtil {
 	public Boolean delKey(String key) {
 		return stringRedisTemplate.delete(key);
 
+	}
+
+	public void setList(String key, List<String> listToken) {
+		stringRedisTemplate.opsForList().leftPushAll(key, listToken);
+	}
+	public StringRedisTemplate getStringRedisTemplate() {
+		return stringRedisTemplate;
 	}
 }

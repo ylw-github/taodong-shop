@@ -24,7 +24,29 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/taodong-spike?characterEncoding=utf8&useSSL=false
-
+  rabbitmq:
+    ####连接地址
+    host: 127.0.0.1
+    ####端口号
+    port: 5672
+    ####账号
+    username: guest
+    ####密码
+    password: guest
+    ### 地址
+    virtual-host: spike_host
+    listener:
+      simple:
+        retry:
+          ####开启消费者（程序出现异常的情况下会）进行重试
+          enabled: true
+          ####最大重试次数
+          max-attempts: 5
+          ####重试间隔时间
+          initial-interval: 1000
+        ####开启手动ack
+        acknowledge-mode: manual
+        default-requeue-rejected: false
 ####打印MyBatias日志
 logging:
   level:
