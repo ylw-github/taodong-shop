@@ -1,6 +1,7 @@
 package com.ylw.service.spike.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.ylw.common.web.core.api.BaseApiService;
 import com.ylw.common.web.core.entity.BaseResponse;
 import com.ylw.common.web.core.util.GenerateToken;
@@ -56,6 +57,8 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 	}
 
 	@Override
+	@Transactional
+	@HystrixCommand(fallbackMethod = "spikeFallback")
 	public BaseResponse<JSONObject> spike(String phone, Long seckillId) {
 		// 1.参数验证
 		if (StringUtils.isEmpty(phone)) {
@@ -74,6 +77,10 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 		// 3.获取到秒杀token之后，异步放入mq中实现修改商品的库存
 		sendSeckillMsg(seckillId, phone);
 		return setResultSuccess("正在排队中.......");
+	}
+
+	private BaseResponse<JSONObject> spikeFallback(String phone, Long seckillId) {
+		return setResultError("服务器忙,请稍后重试!");
 	}
 
 	@Async

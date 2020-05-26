@@ -28,13 +28,17 @@ zuul:
       path: /api-member/**
       serviceId: taodong-shop-service-member
     api-c:
-      ### 以 /api-member/访问转发到订单服务
+      ### 以 /api-pay/访问转发到支付服务
       path: /api-pay/**
       serviceId: taodong-shop-service-pay
     api-d:
-      ### 以 /api-pay/访问转发到订单服务
+      ### 以 /public/api-pay/访问转发到支付服务
       path: /public/api-pay/**
       serviceId: taodong-shop-service-pay
+    api-e:
+      ### 以 /api-spike/访问转发到秒杀服务
+      path: /api-spike/**
+      serviceId: taodong-shop-service-spike
 
 taodong-shop:
   zuul:

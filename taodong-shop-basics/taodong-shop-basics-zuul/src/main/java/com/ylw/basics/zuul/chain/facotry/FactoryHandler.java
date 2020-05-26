@@ -17,9 +17,13 @@ public class FactoryHandler {
         GatewayHandler handler3 = (GatewayHandler) SpringContextUtil.getBean("filterParamHandler");
         handler1.setNextHandler(handler3);
 
-        //4.验证accessToken
-        GatewayHandler handler4 = (GatewayHandler) SpringContextUtil.getBean("apiAuthorityHandler");
+        //4.服务限流
+        GatewayHandler handler4 = (GatewayHandler) SpringContextUtil.getBean("currentLimitHandler");
         handler3.setNextHandler(handler4);
+
+        //5.验证accessToken
+        GatewayHandler handler5 = (GatewayHandler) SpringContextUtil.getBean("apiAuthorityHandler");
+        handler4.setNextHandler(handler5);
 
         return handler1;
     }
