@@ -4,12 +4,12 @@
 
 众所周知，目前主流的电商企业就是 “淘宝” 和 “京东” 了，跟个风，本电商项目叫 [《淘东电商项目》](https://blog.csdn.net/qq_20042935/category_9444667_2.html) ，项目采用目前主流的`SpringBoot + SpringCloud`来构建，实现一套完整的微服务解决方案。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200306152412811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIwMDQyOTM1,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200306151815639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIwMDQyOTM1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://github.com/ylw-github/taodong-shop/blob/master/img/login.png)
+![在这里插入图片描述](https://github.com/ylw-github/taodong-shop/blob/master/img/index.png)
 
 
 ## 2. 项目架构图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200130145449578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly95YW5nbGlud2VpLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://github.com/ylw-github/taodong-shop/blob/master/img/structure.png)
 ## 3. 环境需求
 由于本项目对环境的要求非常高
 
