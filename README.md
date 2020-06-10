@@ -53,60 +53,60 @@
 
 
 ## 5. 项目目录结构
-l____ **taodong-shop-basics（分布式基础设施）**
-l________ taodong-shop-basics-eureka（注册中心）
-l________ taodong-shop-basics-apollo-config-server（分布式配置中心）
-l________ taodong-shop-basics-elk-kafka（分布式日志采集系统）
-l________ taodong-shop-basics-lcn（分布式事务解决框架）
-l________ taodong-shop-basics-xxljob（分布式任务调度平台）
-l________ taodong-shop-basics-xxlsso-server（分布式单点登录系统）
-l________ taodong-shop-basics-zipkin（分布式调用链系统）
-l________ taodong-shop-basics-zuul（网关）
-l____ **taodong-shop-service-api（接口层）**
-l________ taodong-shop-service-api-goods（商品服务接口）
-l________ taodong-shop-service-api-member（会员服务接口）
-l________ taodong-shop-service-api-order（订单服务接口）
-l________ taodong-shop-service-api-pay（支付服务接口）
-l________ taodong-shop-service-api-search（搜索服务接口）
-l________ taodong-shop-service-api-spike（秒杀服务接口）
-l________ taodong-shop-service-api-sso（单点登录服务接口）
-l________ taodong-shop-service-api-weixin（微信服务接口）
-l________ taodong-shop-service-api-integral（积分服务接口）
-l________ taodong-shop-service-api-auth（OAuth授权验证服务接口）
-l____ **taodong-shop-service（服务层）**
-l________ taodong-shop-service-goods（商品服务）
-l________ taodong-shop-service-member（会员服务）
-l________ taodong-shop-service-order（订单服务）
-l________ taodong-shop-service-pay（支付服务）
-l________ taodong-shop-service-search（搜索服务）
-l________ taodong-shop-service-spike（秒杀服务）
-l________ taodong-shop-service-sso（单点登录服务）
-l________ taodong-shop-service-weixin（微信服务）
-l________ taodong-shop-service-integral（积分服务）
-l________ taodong-shop-service-auth（OAuth授权验证服务）
-**l____ taodong-shop-portal（门户）**
-l________ taodong-shop-portal-cms（管理系统）
-l________ taodong-shop-portal-search（搜索系统）
-l________ taodong-shop-portal-spike（秒杀系统）
-l________ taodong-shop-portal-sso（秒杀系统）
-l________ taodong-shop-portal-web（门户系统）
-l________ taodong-shop-portal-pay-web（支付系统）
-**l____ taodong-shop-api-dto（DTO）**
-l________ taodong-shop-api-item-dto（商户服务DTO）
-l________ taodong-shop-api-member-dto（会员服务DTO）
-l________ taodong-shop-api-order-dto（订单服务DTO）
-l________ taodong-shop-api-pay-dto（支付服务DTO）
-l________ taodong-shop-api-search-dto（搜索服务DTO）
-l________ taodong-shop-api-spike-dto（秒杀服务DTO）
-l________ taodong-shop-api-sso-dto（单点登录服务DTO）
-l________ taodong-shop-api-weixin-dto（微信服务DTO）
-**l____ taodong-shop-common（通用框架）**
-l________ taodong-shop-common-core（核心工具类）
-l________ taodong-shop-common-web-core（web核心工具类）
-l________ taodong-shop-common-xxlsso-core（单点登录系统核心工具类）
-**l____ taodong-shop-pay-plugin（支付插件）**
-l________ taodong-shop-union-plugin（银联支付插件）
-l________ taodong-shop-alipay-plugin（支付宝支付插件）
+- l____ **taodong-shop-basics（分布式基础设施）**
+- l________ taodong-shop-basics-eureka（注册中心）
+- l________ taodong-shop-basics-apollo-config-server（分布式配置中心）
+- l________ taodong-shop-basics-elk-kafka（分布式日志采集系统）
+- l________ taodong-shop-basics-lcn（分布式事务解决框架）
+- l________ taodong-shop-basics-xxljob（分布式任务调度平台）
+- l________ taodong-shop-basics-xxlsso-server（分布式单点登录系统）
+- l________ taodong-shop-basics-zipkin（分布式调用链系统）
+- l________ taodong-shop-basics-zuul（网关）
+- l____ **taodong-shop-service-api（接口层）**
+- l________ taodong-shop-service-api-goods（商品服务接口）
+- l________ taodong-shop-service-api-member（会员服务接口）
+- l________ taodong-shop-service-api-order（订单服务接口）
+- l________ taodong-shop-service-api-pay（支付服务接口）
+- l________ taodong-shop-service-api-search（搜索服务接口）
+- l________ taodong-shop-service-api-spike（秒杀服务接口）
+- l________ taodong-shop-service-api-sso（单点登录服务接口）
+- l________ taodong-shop-service-api-weixin（微信服务接口）
+- l________ taodong-shop-service-api-integral（积分服务接口）
+- l________ taodong-shop-service-api-auth（OAuth授权验证服务接口）
+- l____ **taodong-shop-service（服务层）**
+- l________ taodong-shop-service-goods（商品服务）
+- l________ taodong-shop-service-member（会员服务）
+- l________ taodong-shop-service-order（订单服务）
+- l________ taodong-shop-service-pay（支付服务）
+- l________ taodong-shop-service-search（搜索服务）
+- l________ taodong-shop-service-spike（秒杀服务）
+- l________ taodong-shop-service-sso（单点登录服务）
+- l________ taodong-shop-service-weixin（微信服务）
+- l________ taodong-shop-service-integral（积分服务）
+- l________ taodong-shop-service-auth（OAuth授权验证服务）
+- **l____ taodong-shop-portal（门户）**
+- l________ taodong-shop-portal-cms（管理系统）
+- l________ taodong-shop-portal-search（搜索系统）
+- l________ taodong-shop-portal-spike（秒杀系统）
+- l________ taodong-shop-portal-sso（秒杀系统）
+- l________ taodong-shop-portal-web（门户系统）
+- l________ taodong-shop-portal-pay-web（支付系统）
+- **l____ taodong-shop-api-dto（DTO）**
+- l________ taodong-shop-api-item-dto（商户服务DTO）
+- l________ taodong-shop-api-member-dto（会员服务DTO）
+- l________ taodong-shop-api-order-dto（订单服务DTO）
+- l________ taodong-shop-api-pay-dto（支付服务DTO）
+- l________ taodong-shop-api-search-dto（搜索服务DTO）
+- l________ taodong-shop-api-spike-dto（秒杀服务DTO）
+- l________ taodong-shop-api-sso-dto（单点登录服务DTO）
+- l________ taodong-shop-api-weixin-dto（微信服务DTO）
+- **l____ taodong-shop-common（通用框架）**
+- l________ taodong-shop-common-core（核心工具类）
+- l________ taodong-shop-common-web-core（web核心工具类）
+- l________ taodong-shop-common-xxlsso-core（单点登录系统核心工具类）
+- **l____ taodong-shop-pay-plugin（支付插件）**
+- l________ taodong-shop-union-plugin（银联支付插件）
+- l________ taodong-shop-alipay-plugin（支付宝支付插件）
 
 
 
